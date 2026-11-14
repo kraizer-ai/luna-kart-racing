@@ -1,0 +1,46 @@
+{
+ "schema": "luna-lite-lamps-v2",
+ "files": {
+  "dawn": "lamps_dawn.png",
+  "night": "lamps_night.png"
+ },
+ "width": 1886,
+ "height": 1255,
+ "texel": 0.5,
+ "rect": {
+  "x": -545,
+  "z": -335,
+  "width": 943,
+  "depth": 627.5
+ },
+ "encoding": {
+  "kind": "log2",
+  "k": 2000,
+  "span": 12.965964610272083,
+  "note": "value = (2^(v * span) - 1) / k"
+ },
+ "points": {
+  "file": "lamps.bin",
+  "count": 5416,
+  "stride": 7,
+  "layout": "x y z r g b reach (night strengths)"
+ },
+ "noonShare": 0.0017357593628583435,
+ "stats": {
+  "emitters": 5416,
+  "dawn": {
+   "peak": 0.388,
+   "litShare": 0.123
+  },
+  "night": {
+   "peak": 0.3968,
+   "litShare": 0.278
+  },
+  "dawnSamePlaces": true,
+  "dawnRatioMedian": 0.39521448102678575,
+  "dawnRatioSpread": [
+   0.39521445658643967,
+   0.9779938541666666
+  ]
+ }
+}

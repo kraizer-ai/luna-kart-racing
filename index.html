@@ -100,17 +100,17 @@
       </div>
       <div class="touch-top"><button id="touchCamera" aria-label="시점 바꾸기">시점</button><button id="touchPause" aria-label="일시정지">Ⅱ</button></div>
     </div>
-    <dialog id="settings"><form method="dialog"><div class="dialog-head"><h2>주행 설정</h2><button aria-label="설정 닫기" class="icon-button">×</button></div><label>그래픽<select id="quality"><option value="high">높음</option><option value="balanced">균형</option><option value="low">성능 우선</option></select></label><label>최대 렌더 해상도<select id="resolution"><option value="1080">1920 × 1080</option><option value="1440">2560 × 1440</option><option value="720">1280 × 720</option><option value="576">1024 × 576</option></select></label><label>카메라<select id="cameraMode"><option value="chase">카트를 따라가기</option><option value="cockpit">운전석</option><option value="wide">넓게 보기</option></select></label><label class="toggle">엔진 소리<input id="sound" type="checkbox" checked></label><p class="settings-note">WASD 또는 방향키로 운전합니다. E 부스터, SPACE 사이드 브레이크.<br>화면을 끌면 주위를 둘러볼 수 있습니다.</p><button id="exportMetrics" class="secondary" type="button">성능 기록 내려받기</button></form></dialog>
+    <dialog id="settings"><form method="dialog"><div class="dialog-head"><h2>주행 설정</h2><button aria-label="설정 닫기" class="icon-button">×</button></div><label>그래픽<select id="quality"><option value="high">높음</option><option value="balanced">균형</option><option value="low">성능 우선</option></select></label><label>최대 렌더 해상도<select id="resolution"><option value="1080">1920 × 1080</option><option value="1440">2560 × 1440</option><option value="2160">3840 × 2160</option><option value="900">1600 × 900</option><option value="720">1280 × 720</option><option value="576">1024 × 576</option></select></label><label>카메라<select id="cameraMode"><option value="chase">카트를 따라가기</option><option value="cockpit">운전석</option><option value="wide">넓게 보기</option></select></label><label class="toggle">엔진 소리<input id="sound" type="checkbox" checked></label><p class="settings-note">WASD 또는 방향키로 운전합니다. E 부스터, SPACE 사이드 브레이크.<br>화면을 끌면 주위를 둘러볼 수 있습니다.</p><button id="modeSwitch" class="secondary" type="button">원본 형상으로 보기 (고사양 PC)</button><button id="exportMetrics" class="secondary" type="button">성능 기록 내려받기</button></form></dialog>
     <section id="stats" class="stats hidden" aria-label="성능 측정"><header>실제 렌더링 <button id="closeStats" aria-label="성능 패널 닫기">×</button></header><pre id="statsText"></pre></section>
     <div id="toast" class="toast" role="status"></div>
     <footer class="credits">© OpenStreetMap contributors · 공원 형상: Dongtan Luna</footer>
-  </main>
+  </main>
 <script>
   addEventListener('DOMContentLoaded', async () => {
     function load(src,type){return new Promise((resolve,reject)=>{const s=document.createElement('script');if(type)s.type=type;s.src=src;s.onload=resolve;s.onerror=()=>reject(Error('실행 파일을 열지 못했습니다. 배포 폴더가 함께 있는지 확인해 주세요.'));document.body.append(s);});}
     try{
       if(location.protocol==='file:'){const css=document.createElement('link');css.rel='stylesheet';css.href='./offline/app.css';document.head.append(css);await load('./offline/assets.js');await load('./offline/app.js');}
-      else await load("./assets/index-V8zdo84n.js",'module');
+      else await load("./assets/index-CSJ_OkCt.js",'module');
     }catch(error){document.getElementById('loadStatus').textContent=error.message;document.getElementById('startLabel').textContent='실행 자료를 확인해 주세요';window.lunaError={message:error.message};}
   });
 </script>
