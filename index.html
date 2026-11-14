@@ -73,6 +73,8 @@
       <div id="raceSub" class="race-sub"></div>
       <ol id="raceSectors" class="race-sectors"><li><span>새벽</span><b>—</b></li><li><span>정오</span><b>—</b></li><li><span>야간</span><b>—</b></li></ol>
     </section>
+    <!-- The best lap ever, on screen all the time while driving (race.js fills it; it sits just before the standings, which make room for it). -->
+    <div id="bestEver" class="best-ever hidden"><span class="label">역대 1위</span><b id="bestEverName">—</b><i id="bestEverTime">—</i></div>
     <aside id="leaderboard" class="leaderboard hidden" aria-label="리더보드">
       <header><span id="boardTitle">대기실</span><small id="boardCount">연결 중</small></header>
       <ol id="boardLive" class="board-list"></ol>
@@ -118,7 +120,7 @@
     function load(src,type){return new Promise((resolve,reject)=>{const s=document.createElement('script');if(type)s.type=type;s.src=src;s.onload=resolve;s.onerror=()=>reject(Error('실행 파일을 열지 못했습니다. 배포 폴더가 함께 있는지 확인해 주세요.'));document.body.append(s);});}
     try{
       if(location.protocol==='file:'){const css=document.createElement('link');css.rel='stylesheet';css.href='./offline/app.css';document.head.append(css);await load('./offline/assets.js');await load('./offline/app.js');}
-      else await load("./assets/index-DL27sekB.js",'module');
+      else await load("./assets/index-xfQpviz_.js",'module');
     }catch(error){document.getElementById('loadStatus').textContent=error.message;document.getElementById('startLabel').textContent='실행 자료를 확인해 주세요';window.lunaError={message:error.message};}
   });
 </script>
