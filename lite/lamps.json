@@ -21,9 +21,9 @@
  },
  "points": {
   "file": "lamps.bin",
-  "count": 5416,
+  "count": 1642,
   "stride": 7,
-  "layout": "x y z r g b reach (night strengths)"
+  "layout": "x y z r g b reach (night strengths); lamp heads only"
  },
  "noonShare": 0.0017357593628583435,
  "stats": {
