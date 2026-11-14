@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#122323" />
+  <meta name="description" content="동탄호수공원 루나 카트 레이싱: 실제 호수 둘레길을 함께 달리는 브라우저 3D 카트 레이스." />
+  <title>루나 카트 레이싱 · 동탄호수공원</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23122323'/%3E%3Cpath d='M20 14v36h30' fill='none' stroke='%23d6eeae' stroke-width='7'/%3E%3Ccircle cx='43' cy='22' r='8' fill='%23d6eeae'/%3E%3C/svg%3E" />
+  
+  <meta name="luna-asset-parts" content="asset-parts.json" />
+  <meta name="luna-lobby" content="https://luna-drive.byeoksa.workers.dev" />
+</head>
+<body>
+  <noscript>
+    <style>#app{display:none}</style>
+    <section style="font:16px/1.7 'Malgun Gothic',sans-serif;background:#172c28;color:#eef1e5;padding:40px;min-height:100vh;box-sizing:border-box">
+      <h1>LUNA DRIVE</h1>
+      <p>브라우저에서 JavaScript를 허용하면 주행 화면이 열립니다.</p>
+    </section>
+  </noscript>
+  <main id="app">
+    <canvas id="world" aria-label="동탄호수공원 3D 카트 주행 화면" tabindex="0"></canvas>
+    <header class="topbar">
+      <a class="wordmark" href="./index.html" aria-label="루나 카트 레이싱 처음으로"><img class="wordmark-logo" src="./brand/logo_wide.webp" alt="루나 카트 레이싱" /></a>
+      <div class="top-right"><span class="location"><i></i>동탄호수공원</span><button id="settingsButton" class="icon-button" aria-label="설정 열기" title="설정">⚙</button></div>
+    </header>
+    <section id="intro" class="intro" aria-label="시작 화면" style="background-image:url(./brand/keyart.jpg)">
+      <video id="introVideo" class="intro-video" muted loop playsinline preload="auto" aria-hidden="true"></video>
+      <div class="intro-shade"></div>
+      <h1 class="intro-brand"><img src="./brand/logo.webp" alt="동탄호수공원 루나 카트 레이싱 · LUNA KART RACING" /></h1>
+      <div id="introLoad" class="intro-load" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="불러오는 중">
+        <div class="intro-status"><span id="introStatus">길의 위치와 풍경을 불러옵니다</span><b id="introPercent">0%</b></div>
+        <div class="intro-bar"><i id="introBar"></i></div>
+      </div>
+      <div id="introMenu" class="intro-menu hidden">
+        <div class="mode-buttons">
+          <button id="playSolo" class="mode"><b>혼자 달리기</b><small>연습 레이스 · 기록은 이 브라우저에</small></button>
+          <button id="playOnline" class="mode"><b>함께 달리기</b><small id="onlineNote">대기실에서 다른 사람과 레이스</small></button>
+        </div>
+        <form id="account" class="account hidden" autocomplete="on">
+          <div id="accountForm" class="account-form">
+            <input id="accountId" name="username" autocomplete="username" placeholder="아이디" maxlength="12" aria-label="아이디" />
+            <input id="accountPassword" name="password" type="password" autocomplete="current-password" placeholder="비밀번호" maxlength="64" aria-label="비밀번호" />
+            <button id="loginButton" type="submit">로그인</button><button id="signupButton" type="button" class="quiet">가입</button>
+          </div>
+          <div id="accountSigned" class="account-signed hidden"><span><b id="accountName">—</b> 님</span><button id="logoutButton" type="button" class="quiet">로그아웃</button></div>
+          <p id="accountStatus" class="account-status">로그인하면 출발선 앞줄에 서고 기록이 아이디로 남습니다. 로그인 없이도 달릴 수 있습니다.</p>
+        </form>
+      </div>
+    </section>
+    <section id="welcome" class="welcome hidden">
+      <span class="eyebrow">호수를 따라, 나만의 속도로</span>
+      <h1>잠깐의<br>다른 일상.</h1>
+      <p>물결과 나무 사이로 이어지는 길.<br>30초 자유 주행 뒤, 접속한 사람들과 함께<br>새벽에서 밤까지 호수 한 바퀴를 달립니다.</p>
+      <div class="intro-meta"><span><b id="routeLength">2.08</b> km <small>호수 한 바퀴</small></span><span><b>03</b><small>하루의 세 가지 빛</small></span></div>
+      <button id="start" class="primary" disabled><span id="startLabel">공원을 준비하는 중</span><span>↗</span></button>
+      <div id="loadStatus" class="load-status" role="status">길의 위치와 풍경을 불러옵니다</div>
+    </section>
+    <section class="time-picker" aria-label="시간대 선택">
+      <button data-preset="dawn"><span class="time-icon">◒</span><span>새벽<small>05:09</small></span></button>
+      <button data-preset="noon" class="selected" aria-pressed="true"><span class="time-icon">☼</span><span>정오<small>12:00</small></span></button>
+      <button data-preset="night"><span class="time-icon">☾</span><span>야간<small>20:35</small></span></button>
+    </section>
+    <section id="raceTop" class="race-top hidden" aria-label="레이스 기록">
+      <div id="racePhase" class="race-phase">연결 중</div>
+      <div id="racePosition" class="race-position hidden"><b id="raceRank">—</b><span id="raceRankOf"></span></div>
+      <div id="raceClock" class="race-clock">—</div>
+      <div id="raceSub" class="race-sub"></div>
+      <ol id="raceSectors" class="race-sectors"><li><span>새벽</span><b>—</b></li><li><span>정오</span><b>—</b></li><li><span>야간</span><b>—</b></li></ol>
+    </section>
+    <aside id="leaderboard" class="leaderboard hidden" aria-label="리더보드">
+      <header><span id="boardTitle">대기실</span><small id="boardCount">연결 중</small></header>
+      <ol id="boardLive" class="board-list"></ol>
+      <h3 id="rankingTitle">전체 랭킹</h3>
+      <ol id="boardRecords" class="board-list records"></ol>
+      <footer>나 <b id="raceMe">—</b></footer>
+    </aside>
+    <div id="booster" class="booster hidden" aria-label="부스터"><div class="booster-gauge"><i id="boosterFill"></i></div><b>BOOST</b><span id="boosterState">20초</span><kbd>E</kbd></div>
+    <div id="countdown" class="countdown hidden" aria-live="assertive"><span id="countdownText">3</span></div>
+    <section id="results" class="results hidden" aria-label="레이스 결과"><h2>레이스 결과</h2><ol id="resultsList" class="board-list"></ol><p id="resultsNote"></p></section>
+    <div id="nameLabels" class="name-labels" aria-hidden="true"></div>
+    <div id="fade" class="fade"></div>
+    <section id="driveHud" class="drive-hud hidden" aria-label="주행 정보">
+      <div class="speed"><strong id="speed">0</strong><span>km/h</span><small id="gear">READY</small></div>
+      <div class="journey"><div><span id="placeName">호수 둘레길</span><span id="distance">0 / 2,083 m</span></div><div class="track"><i id="progress"></i></div></div>
+    </section>
+    <aside class="map-panel"><div class="map-title"><span>LAKE LOOP</span><span>N ↑</span></div><canvas id="minimap" width="440" height="370" aria-label="현재 위치 미니맵"></canvas><div class="map-bottom"><span class="map-dot"></span><span>출발선</span><span id="lap">LAP 01</span></div></aside>
+    <div class="bottom-left"><span id="performance" title="실제 그린 프레임 수. 프레임 생성 없음">— fps</span><span class="separator"></span><span id="qualityLabel">HIGH · 1080p</span><button id="statsButton" class="text-button">상세</button></div>
+    <section class="show-player" aria-label="음악 분수쇼"><div><span class="show-dot"></span><strong id="showTitle">음악 분수</strong><time id="showClock">0:00</time></div><nav><button id="showPlay">재생</button><button id="showNext" aria-label="다른 음악 분수쇼">다음 곡 ↗</button><label>음량 <input id="showVolume" type="range" min="0" max="1" step=".01" value=".2" /></label></nav></section>
+    <nav id="driveControls" class="drive-controls hidden" aria-label="주행 조작"><span><kbd>W</kbd><kbd>S</kbd>가속 · 브레이크/후진</span><span><kbd>A</kbd><kbd>D</kbd>조향</span><span><kbd>SPACE</kbd>사이드 브레이크</span><span><kbd>E</kbd>부스터</span><span><kbd>휠</kbd>확대 · 축소</span><button id="cameraButton">시점 <kbd>C</kbd></button><button id="resetButton">복귀 <kbd>R</kbd></button><button id="pauseButton">일시정지 <kbd>ESC</kbd></button></nav>
+    <div id="touchControls" class="touch-controls hidden">
+      <div id="steerPad" class="steer-pad" role="group" aria-label="조향: 왼쪽 오른쪽"><span class="steer-left" aria-hidden="true">◀</span><span class="steer-right" aria-hidden="true">▶</span></div>
+      <div class="touch-pedals">
+        <button data-touch="boost" class="touch-boost" aria-label="부스터"><span>BOOST</span></button>
+        <button data-touch="handbrake" class="touch-drift" aria-label="사이드 브레이크"><span>사이드</span></button>
+        <button data-touch="reverse" class="touch-brake" aria-label="브레이크 · 후진"><span>브레이크</span></button>
+        <button data-touch="forward" class="touch-gas" aria-label="가속"><span>가속</span></button>
+      </div>
+      <div class="touch-top"><button id="touchCamera" aria-label="시점 바꾸기">시점</button><button id="touchPause" aria-label="일시정지">Ⅱ</button></div>
+    </div>
+    <dialog id="settings"><form method="dialog"><div class="dialog-head"><h2>주행 설정</h2><button aria-label="설정 닫기" class="icon-button">×</button></div><label>그래픽<select id="quality"><option value="high">높음</option><option value="balanced">균형</option><option value="low">성능 우선</option></select></label><label>최대 렌더 해상도<select id="resolution"><option value="1080">1920 × 1080</option><option value="1440">2560 × 1440</option><option value="720">1280 × 720</option></select></label><label>카메라<select id="cameraMode"><option value="chase">카트를 따라가기</option><option value="cockpit">운전석</option><option value="wide">넓게 보기</option></select></label><label class="toggle">엔진 소리<input id="sound" type="checkbox" checked></label><p class="settings-note">WASD 또는 방향키로 운전합니다. E 부스터, SPACE 사이드 브레이크.<br>화면을 끌면 주위를 둘러볼 수 있습니다.</p><button id="exportMetrics" class="secondary" type="button">성능 기록 내려받기</button></form></dialog>
+    <section id="stats" class="stats hidden" aria-label="성능 측정"><header>실제 렌더링 <button id="closeStats" aria-label="성능 패널 닫기">×</button></header><pre id="statsText"></pre></section>
+    <div id="toast" class="toast" role="status"></div>
+    <footer class="credits">© OpenStreetMap contributors · 공원 형상: Dongtan Luna</footer>
+  </main>
+<script>
+  addEventListener('DOMContentLoaded', async () => {
+    function load(src,type){return new Promise((resolve,reject)=>{const s=document.createElement('script');if(type)s.type=type;s.src=src;s.onload=resolve;s.onerror=()=>reject(Error('실행 파일을 열지 못했습니다. 배포 폴더가 함께 있는지 확인해 주세요.'));document.body.append(s);});}
+    try{
+      if(location.protocol==='file:'){const css=document.createElement('link');css.rel='stylesheet';css.href='./offline/app.css';document.head.append(css);await load('./offline/assets.js');await load('./offline/app.js');}
+      else await load("./assets/index-CkC9tqW3.js",'module');
+    }catch(error){document.getElementById('loadStatus').textContent=error.message;document.getElementById('startLabel').textContent='실행 자료를 확인해 주세요';window.lunaError={message:error.message};}
+  });
+</script>
+</body>
+</html>

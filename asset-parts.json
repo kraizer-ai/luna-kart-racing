@@ -1,0 +1,38 @@
+{
+ "schema": "luna-asset-parts-v1",
+ "partBytes": 16777216,
+ "files": {
+  "compressed/driving/scene.mesh.bin.gz": {
+   "bytes": 74361624,
+   "sha256": "ff730df417475cffd856ce6889ed3bdbfaf4a545c989c5d2163769a37fc2f7ee",
+   "type": "application/gzip",
+   "parts": [
+    {
+     "path": "parts/ff730df417475cffd856ce68-000.bin",
+     "bytes": 16777216,
+     "sha256": "429e54c973335137ade0de82fd8a637bc6b79436b2b8d96d4515b45e69ebad7c"
+    },
+    {
+     "path": "parts/ff730df417475cffd856ce68-001.bin",
+     "bytes": 16777216,
+     "sha256": "20bd14a42e6df24ed03a24b024781d9a8dbfe6b502bd154903884e19a98c1e6b"
+    },
+    {
+     "path": "parts/ff730df417475cffd856ce68-002.bin",
+     "bytes": 16777216,
+     "sha256": "64f435f6efd556287ad08a927c98af4d8b3f9f225f16c8a925b269876b0d9877"
+    },
+    {
+     "path": "parts/ff730df417475cffd856ce68-003.bin",
+     "bytes": 16777216,
+     "sha256": "a4df2806efdd7eff2a448e791dc92affc88cecf8aac4790cc7d922c8badc6584"
+    },
+    {
+     "path": "parts/ff730df417475cffd856ce68-004.bin",
+     "bytes": 7252760,
+     "sha256": "196ae8fe8714c5bf799988b75fc350cd0e5316a4d81786fb0e7d0858d72cf26d"
+    }
+   ]
+  }
+ }
+}
