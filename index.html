@@ -39,9 +39,17 @@
       </div>
       <div id="introMenu" class="intro-menu hidden">
         <div class="mode-buttons">
-          <button id="playSolo" class="mode"><b>혼자 달리기</b><small>연습 레이스 · 기록은 이 브라우저에</small></button>
-          <button id="playOnline" class="mode"><b>함께 달리기</b><small id="onlineNote">대기실에서 다른 사람과 레이스</small></button>
+          <button id="playSolo" class="mode"><b>혼자 달리기</b><small>CPU 카트와 연습 레이스</small></button>
+          <button id="playOnline" class="mode"><b>방 만들기</b><small id="onlineNote">내가 방장 · 친구를 불러 함께 출발</small></button>
+          <button id="playJoin" class="mode"><b>방 참여하기</b><small>열린 방 목록 · 방 코드로 참여</small></button>
         </div>
+        <section id="roomJoin" class="room-join hidden" aria-label="방 참여하기">
+          <header><b>방 참여하기</b><button id="roomJoinClose" type="button" class="room-close" aria-label="방 참여하기 닫기">×</button></header>
+          <form id="roomCodeForm" class="room-code" autocomplete="off"><input id="roomCodeInput" maxlength="7" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="방 코드 4자리 (예: K7QM)" aria-label="방 코드" /><button type="submit">코드로 참여</button></form>
+          <div class="room-list-head"><span>열린 방</span><button id="roomRefresh" type="button" class="room-refresh">새로 고침</button></div>
+          <ol id="roomList" class="room-list" aria-live="polite"></ol>
+          <p id="roomJoinStatus" class="room-status"></p>
+        </section>
         <form id="account" class="account hidden" autocomplete="on">
           <div id="accountForm" class="account-form">
             <input id="accountId" name="username" autocomplete="username" placeholder="아이디" maxlength="12" aria-label="아이디" />
@@ -82,7 +90,13 @@
       <ol id="boardRecords" class="board-list records"></ol>
       <footer>나 <b id="raceMe">—</b></footer>
     </aside>
-    <div id="booster" class="booster hidden" aria-label="부스터"><div class="booster-gauge"><i id="boosterFill"></i></div><b>BOOST</b><span id="boosterState">20초</span><kbd>E</kbd></div>
+    <section id="roomPanel" class="room-panel hidden" aria-label="방">
+      <div class="room-head"><span class="room-label">방</span><b id="roomCode">----</b><button id="roomInvite" type="button" class="room-invite">초대 링크</button></div>
+      <ul id="roomPlayers" class="room-players"></ul>
+      <button id="roomStart" type="button" class="room-start">출발</button>
+      <p id="roomWait" class="room-wait">방장이 출발하기를 기다리는 중</p>
+    </section>
+    <div id="booster" class="booster hidden" aria-label="부스터"><div class="booster-slots" aria-hidden="true"><i></i><i></i><i></i></div><div class="booster-gauge"><i id="boosterFill"></i></div><b>BOOST</b><span id="boosterState">20초</span><kbd>E</kbd></div>
     <div id="countdown" class="countdown hidden" aria-live="assertive"><span id="countdownText">3</span></div>
     <section id="results" class="results hidden" aria-label="레이스 결과"><h2>레이스 결과</h2><ol id="resultsList" class="board-list"></ol><p id="resultsNote"></p></section>
     <div id="nameLabels" class="name-labels" aria-hidden="true"></div>
@@ -94,12 +108,12 @@
     <aside class="map-panel"><div class="map-title"><span>LAKE LOOP</span><span>N ↑</span></div><canvas id="minimap" width="440" height="370" aria-label="현재 위치 미니맵"></canvas><div class="map-bottom"><span class="map-dot"></span><span>출발선</span><span id="lap">LAP 01</span></div></aside>
     <div class="bottom-left"><span id="performance" title="실제 그린 프레임 수. 프레임 생성 없음">— fps</span><span class="separator"></span><span id="qualityLabel">HIGH · 1080p</span><button id="statsButton" class="text-button">상세</button></div>
     <section class="show-player" aria-label="음악 분수쇼"><div><span class="show-dot"></span><strong id="showTitle">음악 분수</strong><time id="showClock">0:00</time></div><nav><button id="showPlay">재생</button><button id="showNext" aria-label="다른 음악 분수쇼">다음 곡 ↗</button><label>음량 <input id="showVolume" type="range" min="0" max="1" step=".01" value=".2" /></label></nav></section>
-    <nav id="driveControls" class="drive-controls hidden" aria-label="주행 조작"><span><kbd>W</kbd><kbd>S</kbd>가속 · 브레이크/후진</span><span><kbd>A</kbd><kbd>D</kbd>조향</span><span><kbd>SPACE</kbd>사이드 브레이크</span><span><kbd>E</kbd>부스터</span><span><kbd>휠</kbd>확대 · 축소</span><button id="cameraButton">시점 <kbd>C</kbd></button><button id="resetButton">복귀 <kbd>R</kbd></button><button id="pauseButton">일시정지 <kbd>ESC</kbd></button></nav>
+    <nav id="driveControls" class="drive-controls hidden" aria-label="주행 조작"><span><kbd>W</kbd><kbd>S</kbd>가속 · 브레이크/후진</span><span><kbd>A</kbd><kbd>D</kbd>조향</span><span><kbd>SPACE</kbd>드리프트</span><span><kbd>E</kbd>부스터</span><span><kbd>휠</kbd>확대 · 축소</span><button id="cameraButton">시점 <kbd>C</kbd></button><button id="resetButton">복귀 <kbd>R</kbd></button><button id="pauseButton">일시정지 <kbd>ESC</kbd></button></nav>
     <div id="touchControls" class="touch-controls hidden">
       <!-- Steering: the pad appears under the thumb anywhere in this zone and is dragged sideways (src/touch-controls.js). -->
       <div id="steerPad" class="steer-zone" role="group" aria-label="조향: 누른 곳에서 좌우로 끌기"><i class="steer-base"><svg viewBox="0 0 196 72" aria-hidden="true" focusable="false"><rect x="2" y="2" width="192" height="68" rx="34"/><path d="M27 27l-10 9 10 9M169 27l10 9-10 9"/></svg></i><i class="steer-knob"><svg viewBox="0 0 60 60" aria-hidden="true" focusable="false"><circle cx="30" cy="30" r="27"/><path d="M23 21v18M30 18v24M37 21v18"/></svg></i></div>
       <div class="touch-pedals">
-        <button data-touch="handbrake" class="touch-btn touch-hand" aria-label="사이드 브레이크"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="10.5"/><path d="M20.5 30V18h4.6a3.7 3.7 0 0 1 0 7.4h-4.6"/><path d="M9.2 12a17 17 0 0 0 0 24M38.8 12a17 17 0 0 1 0 24"/></svg></button>
+        <button data-touch="drift" class="touch-btn touch-hand touch-drift" aria-label="드리프트"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M11 37c3-12 11-20 24-23"/><path d="M29.5 9.6 35.6 14l-4.7 5.9"/><path d="M14.6 40.4c2.4-6 6.2-10.6 11.4-13.6" stroke-width="1.6" opacity=".55"/><path d="M19.6 41.8c2-4.5 5-8 9-10.4" stroke-width="1.6" opacity=".55"/></svg></button>
         <button data-touch="boost" class="touch-btn touch-boost" aria-label="부스터"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path class="flame" d="M25 3c1.6 7.4 11 11.7 11 23a12 12 0 0 1-24 0c0-5.1 2.3-8.6 4.7-11.1.6 3.3 2 5.2 3.9 6.2-1-6.7 1.1-12.8 4.4-18.1z"/><path d="M24.5 23c2 2.9 4.5 4.6 4.5 7.9a4.5 4.5 0 0 1-9 0c0-3.3 2.5-5 4.5-7.9z"/><path d="M17 42.5h14M21 46h6"/></svg></button>
         <button data-touch="reverse" class="touch-btn touch-brake" aria-label="브레이크 · 후진"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10.5 21.5h27a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-27a3 3 0 0 1-3-3v-10a3 3 0 0 1 3-3z"/><path d="M15 26.5v6M21 26.5v6M27 26.5v6M33 26.5v6"/><path d="M24 21.5v-9a5 5 0 0 1 5-5h4.5"/></svg></button>
         <button data-touch="forward" class="touch-btn touch-gas" aria-label="가속"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M19.5 5.5h9a3 3 0 0 1 3 3.2l-1.7 26.5a3 3 0 0 1-3 2.8h-5.6a3 3 0 0 1-3-2.8L16.5 8.7a3 3 0 0 1 3-3.2z"/><path d="M19.8 12.5h8.4M20.2 18.5h7.6M20.6 24.5h6.8M21 30.5h6"/><path d="M13.5 43h21M24 38v5"/></svg></button>
@@ -110,7 +124,7 @@
         <button id="touchSettings" class="touch-mini" aria-label="설정"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M7 14h17M35 14h6M7 24h6M24 24h17M7 34h13M31 34h10"/><circle cx="29.5" cy="14" r="4.5"/><circle cx="18.5" cy="24" r="4.5"/><circle cx="25.5" cy="34" r="4.5"/></svg></button>
       </div>
     </div>
-    <dialog id="settings"><form method="dialog"><div class="dialog-head"><h2>주행 설정</h2><button aria-label="설정 닫기" class="icon-button">×</button></div><label>그래픽<select id="quality"><option value="high">높음</option><option value="balanced">균형</option><option value="low">성능 우선</option></select></label><label>최대 렌더 해상도<select id="resolution"><option value="1080">1920 × 1080</option><option value="1440">2560 × 1440</option><option value="2160">3840 × 2160</option><option value="900">1600 × 900</option><option value="720">1280 × 720</option><option value="576">1024 × 576</option></select></label><label>카메라<select id="cameraMode"><option value="chase">카트를 따라가기</option><option value="cockpit">운전석</option><option value="wide">넓게 보기</option></select></label><label class="toggle">효과음<input id="sound" type="checkbox" checked></label><label class="level">효과음 크기<input id="sfxVolume" type="range" min="0" max="100" step="1" value="62" aria-label="효과음 크기"><output id="sfxVolumeValue">62</output></label><label class="level">배경음 크기<input id="musicVolume" type="range" min="0" max="100" step="1" value="20" aria-label="배경음 크기"><output id="musicVolumeValue">20</output></label><p id="musicVolumeNote" class="settings-note" hidden>이 기기(아이폰·아이패드)는 배경음을 켜고 끄기만 됩니다. 전체 크기는 기기 음량 버튼으로, 효과음과의 균형은 효과음 크기로 맞춥니다.</p><p class="settings-note">WASD 또는 방향키로 운전합니다. E 부스터, SPACE 사이드 브레이크.<br>화면을 끌면 주위를 둘러볼 수 있습니다.</p><button id="modeSwitch" class="secondary" type="button">원본 형상으로 보기 (고사양 PC)</button><button id="exportMetrics" class="secondary" type="button">성능 기록 내려받기</button></form></dialog>
+    <dialog id="settings"><form method="dialog"><div class="dialog-head"><h2>주행 설정</h2><button aria-label="설정 닫기" class="icon-button">×</button></div><label>그래픽<select id="quality"><option value="high">높음</option><option value="balanced">균형</option><option value="low">성능 우선</option></select></label><label>최대 렌더 해상도<select id="resolution"><option value="1080">1920 × 1080</option><option value="1440">2560 × 1440</option><option value="2160">3840 × 2160</option><option value="900">1600 × 900</option><option value="720">1280 × 720</option><option value="576">1024 × 576</option></select></label><label>카메라<select id="cameraMode"><option value="chase">카트를 따라가기</option><option value="cockpit">운전석</option><option value="wide">넓게 보기</option></select></label><label class="toggle">효과음<input id="sound" type="checkbox" checked></label><label class="level">효과음 크기<input id="sfxVolume" type="range" min="0" max="100" step="1" value="62" aria-label="효과음 크기"><output id="sfxVolumeValue">62</output></label><label class="level">배경음 크기<input id="musicVolume" type="range" min="0" max="100" step="1" value="20" aria-label="배경음 크기"><output id="musicVolumeValue">20</output></label><p id="musicVolumeNote" class="settings-note" hidden>이 기기(아이폰·아이패드)는 배경음을 켜고 끄기만 됩니다. 전체 크기는 기기 음량 버튼으로, 효과음과의 균형은 효과음 크기로 맞춥니다.</p><p class="settings-note">WASD 또는 방향키로 운전합니다. E 부스터(20초마다 하나, 3개까지 모이고 3개면 한 번에 더 세고 길게), SPACE를 누른 채 방향키로 드리프트 · 드리프트가 끝나는 순간 가속을 다시 누르면 순간 부스터.<br>화면을 끌면 주위를 둘러볼 수 있습니다.</p><button id="modeSwitch" class="secondary" type="button">원본 형상으로 보기 (고사양 PC)</button><button id="exportMetrics" class="secondary" type="button">성능 기록 내려받기</button></form></dialog>
     <section id="stats" class="stats hidden" aria-label="성능 측정"><header>실제 렌더링 <button id="closeStats" aria-label="성능 패널 닫기">×</button></header><pre id="statsText"></pre></section>
     <div id="toast" class="toast" role="status"></div>
     <footer class="credits">© OpenStreetMap contributors · 공원 형상: Dongtan Luna</footer>
@@ -120,7 +134,7 @@
     function load(src,type){return new Promise((resolve,reject)=>{const s=document.createElement('script');if(type)s.type=type;s.src=src;s.onload=resolve;s.onerror=()=>reject(Error('실행 파일을 열지 못했습니다. 배포 폴더가 함께 있는지 확인해 주세요.'));document.body.append(s);});}
     try{
       if(location.protocol==='file:'){const css=document.createElement('link');css.rel='stylesheet';css.href='./offline/app.css';document.head.append(css);await load('./offline/assets.js');await load('./offline/app.js');}
-      else await load("./assets/index-CaP6s0hI.js",'module');
+      else await load("./assets/index-CBFrFAQ_.js",'module');
     }catch(error){document.getElementById('loadStatus').textContent=error.message;document.getElementById('startLabel').textContent='실행 자료를 확인해 주세요';window.lunaError={message:error.message};}
   });
 </script>
