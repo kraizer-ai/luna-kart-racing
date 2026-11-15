@@ -67,6 +67,20 @@
    "surface": "courses/como/surface.json",
    "clearance": "courses/como/clearance.json",
    "edges": "courses/como/edges.json"
+  },
+  {
+   "id": "fountain",
+   "name": "음악분수 드리프트 서킷",
+   "laps": 3,
+   "length": 1132.25,
+   "start": 20,
+   "home": 8,
+   "note": "호수 위 유리 도로 · 음악분수를 끼고 도는 드리프트 서킷 (분수쇼 중 레이스)",
+   "route": "courses/fountain/course.json",
+   "surface": "courses/fountain/surface.json",
+   "clearance": "courses/fountain/clearance.json",
+   "edges": "courses/fountain/edges.json",
+   "kerbs": "led"
   }
  ]
 }
