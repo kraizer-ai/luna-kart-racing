@@ -1,0 +1,148 @@
+{
+ "about": "HUD effects art, made by tools/hud/make_hud_art.py: Nano Banana sheets on pure black (tools/hud/raw/), cut into sprites, black keyed to alpha",
+ "model": "gemini-3.1-flash-image",
+ "sheets": {
+  "vfx": {
+   "sheet": "tools/hud/raw/sheet_vfx.png",
+   "prompt": "A sprite sheet of 8 separate video game visual effects for a kart racing game's HUD, arranged in a grid of exactly\n4 columns and 2 rows of equal cells. Each effect sits alone in the middle of its own cell, with a wide empty pure black gap\nbetween neighbouring cells. Pure black background (#000000) everywhere: no gradient, no vignette, no border, no frame, no\nfloor, no text, no letters, no numbers, no logo, no watermark. Bright, saturated, glowing, high-contrast, polished game VFX,\nlike the effects of an arcade racing game. In reading order, left to right, top to bottom:\n1. A dense wall of rising orange and yellow fire flames filling the whole cell from its bottom edge to near its top, the\n   flames licking upward with bright yellow-white cores near the bottom, evenly spread across the full width.\n2. The same dense wall of rising flames but in electric cyan, ice blue and white (a nitro plasma fire), filling the cell.\n3. A round explosive burst of orange-gold sparks and glowing embers flying outward from a small white-hot centre.\n4. A round explosive burst of cyan and white electric sparks flying outward from a small white centre.\n5. A horizontal fiery speed swoosh: one long tapered streak of fire and light moving from left to right with motion blur,\n   thin and faint at the left end, wide and blazing yellow-orange at the right end.\n6. Red glowing broken glass shards bursting outward from the centre, sharp angular fragments with a red-orange glow.\n7. A pair of radiant golden wings made of light spreading left and right from a bright golden centre, with golden light\n   rays behind them, symmetrical, like a champion's emblem.\n8. A single four-pointed white-gold twinkle star with a soft round glow.",
+   "sprites": [
+    "burst_cyan",
+    "burst_orange",
+    "flame_cyan",
+    "flame_orange",
+    "shatter",
+    "streak",
+    "twinkle",
+    "wings"
+   ]
+  },
+  "vfx2": {
+   "sheet": "tools/hud/raw/sheet_vfx2.png",
+   "prompt": "A sprite sheet of 8 separate video game visual effects for a kart racing game's HUD, arranged in a grid of exactly\n4 columns and 2 rows of equal cells. Each effect sits alone in the middle of its own cell, with a wide empty pure black gap\nbetween neighbouring cells. Pure black background (#000000) everywhere: no gradient, no vignette, no border, no frame, no\nfloor, no text, no letters, no numbers, no logo, no watermark. Bright, saturated, glowing, high-contrast, polished game VFX,\nlike the effects of an arcade racing game. In reading order, left to right, top to bottom:\n1. A circular ring of orange and yellow fire seen from the front: flames radiating outward all around a perfect circle, the\n   inside of the ring empty pure black, a fire halo.\n2. The same circular ring of fire but in electric cyan, ice blue and white plasma flames, the inside empty pure black.\n3. A horizontal electric cyan speed swoosh like a comet: one long tapered streak of cyan, ice blue and white light moving\n   from left to right with motion blur, thin and faint at the left end, wide and blazing white-cyan at the right end.\n4. Three stacked upward-pointing chevron arrows made of glowing golden light with short soft motion trails below them, a\n   rank-up effect.\n5. A small upright nitro bottle drawn only as a glowing silver-white neon outline: a rounded glass cylinder with a short\n   metal valve cap on top and thin glass highlights along its left side, the inside of the bottle empty pure black.\n6. A loose upward column of small glowing orange fire embers and sparks rising, tiny bright dots with short trails, more\n   of them at the bottom, thinning toward the top.\n7. A horizontal anamorphic lens flare: one thin bright white-gold horizontal line of light with a small bright core in the\n   middle, fading out toward both ends.\n8. A radiant silver-white starburst glint with eight thin sharp rays and a soft cool blue-white glow.",
+   "sprites": [
+    "bottle",
+    "chevrons",
+    "embers",
+    "flare",
+    "glint",
+    "ring_cyan",
+    "ring_orange",
+    "streak_cyan"
+   ]
+  }
+ },
+ "sprites": {
+  "flame_orange": {
+   "size": [
+    256,
+    256
+   ],
+   "bytes": 27064
+  },
+  "flame_cyan": {
+   "size": [
+    256,
+    256
+   ],
+   "bytes": 30680
+  },
+  "burst_orange": {
+   "size": [
+    183,
+    192
+   ],
+   "bytes": 28160
+  },
+  "burst_cyan": {
+   "size": [
+    185,
+    192
+   ],
+   "bytes": 26906
+  },
+  "streak": {
+   "size": [
+    305,
+    113
+   ],
+   "bytes": 13792
+  },
+  "shatter": {
+   "size": [
+    192,
+    183
+   ],
+   "bytes": 24668
+  },
+  "wings": {
+   "size": [
+    156,
+    160
+   ],
+   "bytes": 15548
+  },
+  "twinkle": {
+   "size": [
+    63,
+    64
+   ],
+   "bytes": 2338
+  },
+  "ring_orange": {
+   "size": [
+    173,
+    192
+   ],
+   "bytes": 18510
+  },
+  "ring_cyan": {
+   "size": [
+    189,
+    192
+   ],
+   "bytes": 18158
+  },
+  "streak_cyan": {
+   "size": [
+    308,
+    109
+   ],
+   "bytes": 11226
+  },
+  "chevrons": {
+   "size": [
+    73,
+    128
+   ],
+   "bytes": 5618
+  },
+  "bottle": {
+   "size": [
+    59,
+    128
+   ],
+   "bytes": 2902
+  },
+  "embers": {
+   "size": [
+    103,
+    192
+   ],
+   "bytes": 8638
+  },
+  "flare": {
+   "size": [
+    278,
+    64
+   ],
+   "bytes": 3388
+  },
+  "glint": {
+   "size": [
+    96,
+    95
+   ],
+   "bytes": 3564
+  }
+ }
+}

@@ -41,16 +41,18 @@
    "surface": "courses/gallery/surface.json",
    "clearance": "courses/gallery/clearance.json",
    "edges": "courses/gallery/edges.json",
-   "kerbs": "circuit"
+   "kerbs": "circuit",
+   "badge": "초보자",
+   "badgeTone": "easy"
   },
   {
    "id": "hill",
    "name": "꼬모 뒤 업힐·다운힐",
    "laps": 2,
-   "length": 1041.2,
+   "length": 1395.8,
    "start": 20,
    "home": 8,
-   "note": "꼬모 옆 언덕길 → 언덕 꼭대기 → 작가정원 뒤 능선 → 호숫가: 오르내리는 길은 4 m 회색 아스팔트 (계단 위도 아스팔트), 호숫가는 원래 길",
+   "note": "꼬모 옆 언덕길 → 우미 앞 잔디 S자 4번 → 북쪽 비탈 지그재그 헤어핀 2번 → 꼭대기(40 m) S자 → 남서 능선 급경사 내리막·헤어핀 → 서쪽 비탈 → 헤어핀 → 호숫가: 4 m 회색 아스팔트 산길 (코너 27개, 경사 최대 20 %), 호숫가는 원래 길",
    "route": "courses/hill/course.json",
    "surface": "courses/hill/surface.json",
    "clearance": "courses/hill/clearance.json",
