@@ -1,0 +1,72 @@
+{
+ "schema": "luna-courses-v1",
+ "about": "The race courses (src/courses.js). Paths are relative to the site root. route: the centre line (loop points every ~0.5 m, widths); surface: deck/concrete runs; clearance: the camera's roof clamp; edges: the open-edges data. start: the start line (metres along the loop); home: where the kart waits on the menu. laps and length must match src/course-rules.js (tests/courses.test.js). hidden: only with ?courses=all. Add a course: tools/courses/make-course.mjs.",
+ "courses": [
+  {
+   "id": "main",
+   "name": "호수 한 바퀴",
+   "note": "동탄호수공원 둘레길 전체",
+   "laps": 1,
+   "length": 2083.94,
+   "start": 205,
+   "home": 8,
+   "route": "course.json.gz",
+   "surface": "course_surface.json",
+   "clearance": "lite/course_clearance.json",
+   "edges": "lite/course_edges.json"
+  },
+  {
+   "id": "test",
+   "name": "시험 코스",
+   "laps": 3,
+   "length": 245.46,
+   "start": 45,
+   "home": 33,
+   "note": "코스 기능 시험용 (호수 북동쪽 광장 산책로)",
+   "route": "courses/test/course.json",
+   "surface": "courses/test/surface.json",
+   "clearance": "courses/test/clearance.json",
+   "edges": "courses/test/edges.json",
+   "hidden": true
+  },
+  {
+   "id": "gallery",
+   "name": "루나 갤러리·호숫가",
+   "laps": 3,
+   "length": 883.03,
+   "start": 20,
+   "home": 8,
+   "note": "루나 갤러리 앞 산책로와 호숫가 데크",
+   "route": "courses/gallery/course.json",
+   "surface": "courses/gallery/surface.json",
+   "clearance": "courses/gallery/clearance.json",
+   "edges": "courses/gallery/edges.json"
+  },
+  {
+   "id": "hill",
+   "name": "꼬모 뒤 업힐·다운힐",
+   "laps": 3,
+   "length": 1055.41,
+   "start": 20,
+   "home": 8,
+   "note": "꼬모 옆 언덕길 → 언덕 꼭대기 → 작가정원 뒤 능선 → 호숫가 (계단 14곳에 카트 경사로)",
+   "route": "courses/hill/course.json",
+   "surface": "courses/hill/surface.json",
+   "clearance": "courses/hill/clearance.json",
+   "edges": "courses/hill/edges.json"
+  },
+  {
+   "id": "como",
+   "name": "꼬모 앞",
+   "laps": 3,
+   "length": 658.36,
+   "start": 20,
+   "home": 8,
+   "note": "꼬모 앞 호숫가 데크 → 지붕 데크 다리·섬 → 동쪽 호숫가 → 새 연결로 → 꼬모 앞 테라스",
+   "route": "courses/como/course.json",
+   "surface": "courses/como/surface.json",
+   "clearance": "courses/como/clearance.json",
+   "edges": "courses/como/edges.json"
+  }
+ ]
+}

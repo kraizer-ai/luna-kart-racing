@@ -33,6 +33,23 @@
      "sha256": "196ae8fe8714c5bf799988b75fc350cd0e5316a4d81786fb0e7d0858d72cf26d"
     }
    ]
+  },
+  "lite/static.bin.gz": {
+   "bytes": 21712382,
+   "sha256": "6b4566a3a4a547787033809f8c5cb2c6099e9d09586e3fab4487c2f53b1b3bd8",
+   "type": "application/gzip",
+   "parts": [
+    {
+     "path": "parts/6b4566a3a4a547787033809f-000.bin",
+     "bytes": 16777216,
+     "sha256": "1cddd52fc5a729acd067f6fb2a1a26e3b6ec6b19367ef85544d2b13115dd262b"
+    },
+    {
+     "path": "parts/6b4566a3a4a547787033809f-001.bin",
+     "bytes": 4935166,
+     "sha256": "f16a9d63e459d7353ddb32abdae0b8cc54603211596a5cbc879ae56f27ffe95d"
+    }
+   ]
   }
  }
 }
