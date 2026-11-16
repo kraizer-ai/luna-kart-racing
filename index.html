@@ -43,8 +43,8 @@
       <div id="introMenu" class="intro-menu hidden">
         <div class="mode-buttons">
           <button id="playSolo" class="mode"><b>혼자 달리기</b><small>CPU 카트와 연습 레이스</small></button>
-          <button id="playOnline" class="mode"><b>방 만들기</b><small id="onlineNote">내가 방장 · 친구를 불러 함께 출발</small></button>
-          <button id="playJoin" class="mode"><b>방 참여하기</b><small>열린 방 목록 · 방 코드로 참여</small></button>
+          <button id="playOnline" class="mode"><b>함께 달리기</b><small id="onlineNote">방 목록 · 방 만들기 · 함께 출발</small></button>
+          <button id="playJoin" class="mode hidden"><b>방 참여하기</b><small>열린 방 목록 · 방 코드로 참여</small></button>
           <button id="myKart" class="mode"><b>내 카트</b><small>돌려 보기 · 도색 · 드라이버 · 데칼</small></button>
           <button id="kartLab" class="mode" onclick="location.href='./kart-lab.html'"><b>카트 보기</b><small>새 카트 · 가까이 보기 · 운전석</small></button>
         </div>
@@ -139,7 +139,7 @@
     function load(src,type){return new Promise((resolve,reject)=>{const s=document.createElement('script');if(type)s.type=type;s.src=src;s.onload=resolve;s.onerror=()=>reject(Error('실행 파일을 열지 못했습니다. 배포 폴더가 함께 있는지 확인해 주세요.'));document.body.append(s);});}
     try{
       if(location.protocol==='file:'){const css=document.createElement('link');css.rel='stylesheet';css.href='./offline/app.css';document.head.append(css);await load('./offline/assets.js');await load('./offline/app.js');}
-      else await load("./assets/index-D9VDiHR8.js",'module');
+      else await load("./assets/index-DaPs_2SG.js",'module');
     }catch(error){document.getElementById('loadStatus').textContent=error.message;document.getElementById('startLabel').textContent='실행 자료를 확인해 주세요';window.lunaError={message:error.message};}
   });
 </script>
