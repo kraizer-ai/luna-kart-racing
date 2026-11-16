@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./main-qBgH0Z-m.js","./kart-CSnSNw-E.js","./showroom-B1998J2G.js","./original-impostors-CjG2X2fB.js","./preload-helper-DIbePYYx.js","./main-6_8kwcm0.css"])))=>i.map(i=>d[i]);
+import{t as e}from"./preload-helper-DIbePYYx.js";location.protocol!==`file:`&&e(()=>import(`./main-qBgH0Z-m.js`),__vite__mapDeps([0,1,2,3,4,5]),import.meta.url);
