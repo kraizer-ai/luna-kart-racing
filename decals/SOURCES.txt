@@ -1,13 +1,14 @@
 Luna Kart Racing 데칼 자료
 
-nb-* 64장: 사용자 저장소 kraizer-ai/naebang, 현재 스냅샷 62b7dae.
-assets/decals/manifest.json에서 source=nano-banana인 동물·자연·기호·무늬 등의 기본 그림만 가져왔다.
+nb-* 562장: 사용자 저장소 kraizer-ai/naebang, 현재 스냅샷 62b7dae.
+2026-11-16 15:10 추가 요청에 따라 assets/decals/manifest.json에서 source=nano-banana인 모든 생성 그림을 가져왔다.
 원본 설명은 gemini-2.5-flash-image로 만든 그림, 512px 이하 WebP라고 명시한다.
-외부 브랜드의 공식 로고, STEERIX, 실재 로봇을 그린 자료는 가져오지 않았다.
+외부 브랜드의 공식 로고 12장과 brand-kit/brand-kit+nano-banana 항목은 제외했다.
+로봇·AI 테마는 사용자가 포함하도록 명시한 생성 그림이다. STEERIX 브랜드 자료는 결정 전까지 보류한다.
 저장소에 이 기본 그림의 별도 공개 라이선스 선언은 발견되지 않았다. 공개 CC0라고 표시하지 않는다.
 이식은 해당 저장소 소유자인 사용자의 명시적인 요청에 따른다.
 각 항목의 원래 파일명과 생성 출처는 manifest.json에 남겼다.
 
-새 luna-* 그림: 이 작업에서 OpenAI 내장 image_gen으로 새로 만든 게임용 그림.
+새 luna-* 및 auto-* 그림: 이 작업에서 OpenAI 내장 image_gen으로 한 그림씩 새로 만든 게임용 그림.
 실재 기업의 로고를 요청하거나 복제하지 않았다. 투명 PNG의 알파를 보존해 512px 이하 WebP로 변환했다.
 생성 프롬프트와 원본 PNG는 out/web_drive/codex/decals/에 보관한다.
