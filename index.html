@@ -11,8 +11,9 @@
   <title>루나 카트 레이싱 · 동탄호수공원</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23122323'/%3E%3Cpath d='M20 14v36h30' fill='none' stroke='%23d6eeae' stroke-width='7'/%3E%3Ccircle cx='43' cy='22' r='8' fill='%23d6eeae'/%3E%3C/svg%3E" />
   
+  <link rel="modulepreload" href="./assets/preload-helper-DIbePYYx.js">
   <style>html,body{margin:0;background:#07100f}img:not([src]){visibility:hidden}</style>
-  <link rel="stylesheet" href="./assets/main-CB_e69FM.css" />
+  <link rel="stylesheet" href="./assets/main-6_8kwcm0.css" />
   <meta name="luna-asset-parts" content="asset-parts.json" />
   <meta name="luna-lobby" content="https://luna-drive.byeoksa.workers.dev" />
 </head>
@@ -44,6 +45,8 @@
           <button id="playSolo" class="mode"><b>혼자 달리기</b><small>CPU 카트와 연습 레이스</small></button>
           <button id="playOnline" class="mode"><b>방 만들기</b><small id="onlineNote">내가 방장 · 친구를 불러 함께 출발</small></button>
           <button id="playJoin" class="mode"><b>방 참여하기</b><small>열린 방 목록 · 방 코드로 참여</small></button>
+          <button id="myKart" class="mode"><b>내 카트</b><small>돌려 보기 · 도색 · 드라이버 · 데칼</small></button>
+          <button id="kartLab" class="mode" onclick="location.href='./kart-lab.html'"><b>카트 보기</b><small>새 카트 · 가까이 보기 · 운전석</small></button>
         </div>
         <section id="roomJoin" class="room-join hidden" aria-label="방 참여하기">
           <header><b>방 참여하기</b><button id="roomJoinClose" type="button" class="room-close" aria-label="방 참여하기 닫기">×</button></header>
@@ -136,7 +139,7 @@
     function load(src,type){return new Promise((resolve,reject)=>{const s=document.createElement('script');if(type)s.type=type;s.src=src;s.onload=resolve;s.onerror=()=>reject(Error('실행 파일을 열지 못했습니다. 배포 폴더가 함께 있는지 확인해 주세요.'));document.body.append(s);});}
     try{
       if(location.protocol==='file:'){const css=document.createElement('link');css.rel='stylesheet';css.href='./offline/app.css';document.head.append(css);await load('./offline/assets.js');await load('./offline/app.js');}
-      else await load("./assets/index-CXOx3w0l.js",'module');
+      else await load("./assets/index-Clh9KwSZ.js",'module');
     }catch(error){document.getElementById('loadStatus').textContent=error.message;document.getElementById('startLabel').textContent='실행 자료를 확인해 주세요';window.lunaError={message:error.message};}
   });
 </script>
