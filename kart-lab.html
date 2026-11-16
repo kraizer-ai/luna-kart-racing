@@ -27,7 +27,7 @@
 <script>
 addEventListener('DOMContentLoaded',async()=>{
   function load(src,type){return new Promise((resolve,reject)=>{const s=document.createElement('script');if(type)s.type=type;s.src=src;s.onload=resolve;s.onerror=()=>reject(Error('카트 보기 자료를 열지 못했습니다.'));document.body.append(s);});}
-  try{if(location.protocol==='file:'){await load('./offline/assets.js');await load('./offline/lab.js');}else await load("./assets/kart-lab-D14HPDTY.js",'module');}
+  try{if(location.protocol==='file:'){await load('./offline/assets.js');await load('./offline/lab.js');}else await load("./assets/kart-lab-CKPPo2Ly.js",'module');}
   catch(error){document.getElementById('labBusy').textContent=error.message;window.lunaError={message:error.message};}
 });
 </script>
