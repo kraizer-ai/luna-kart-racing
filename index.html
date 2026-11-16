@@ -13,7 +13,7 @@
   
   <link rel="modulepreload" href="./assets/preload-helper-DIbePYYx.js">
   <style>html,body{margin:0;background:#07100f}img:not([src]){visibility:hidden}</style>
-  <link rel="stylesheet" href="./assets/main-GyNVZNlp.css" />
+  <link rel="stylesheet" href="./assets/main-CBQGIW1l.css" />
   <meta name="luna-asset-parts" content="asset-parts.json" />
   <meta name="luna-lobby" content="https://luna-drive.byeoksa.workers.dev" />
 </head>
@@ -29,7 +29,7 @@
     <canvas id="world" aria-label="동탄호수공원 3D 카트 주행 화면" tabindex="0"></canvas>
     <header class="topbar">
       <a class="wordmark" href="./index.html" aria-label="루나 카트 레이싱 처음으로"><img class="wordmark-logo" data-src="./brand/logo_wide.webp" alt="루나 카트 레이싱" /></a>
-      <div class="top-right"><span class="location"><i></i>동탄호수공원</span><button id="settingsButton" class="icon-button" aria-label="설정 열기" title="설정">⚙</button></div>
+      <div class="top-right"><span class="location"><i></i>동탄호수공원</span></div>
     </header>
     <section id="intro" class="intro" aria-label="시작 화면" data-background="./brand/keyart.jpg">
       <video id="introVideo" class="intro-video" muted loop playsinline preload="auto" aria-hidden="true"></video>
@@ -43,8 +43,8 @@
       <div id="introMenu" class="intro-menu hidden">
         <div class="mode-buttons">
           <button id="playSolo" class="mode"><b>혼자 달리기</b><small>CPU 카트와 연습 레이스</small></button>
-          <button id="playOnline" class="mode"><b>함께 달리기</b><small id="onlineNote">방 목록 · 방 만들기 · 함께 출발</small></button>
-          <button id="playJoin" class="mode hidden"><b>방 참여하기</b><small>열린 방 목록 · 방 코드로 참여</small></button>
+          <button id="playOnline" class="mode"><b>방 만들기</b><small id="onlineNote">내가 방장 · 친구를 불러 함께 출발</small></button>
+          <button id="playJoin" class="mode"><b>방 참여하기</b><small>열린 방 목록 · 방 코드로 참여</small></button>
           <button id="myKart" class="mode"><b>내 카트</b><small>돌려 보기 · 도색 · 드라이버 · 데칼</small></button>
           <button id="kartLab" class="mode" onclick="location.href='./kart-lab.html'"><b>카트 보기</b><small>새 카트 · 가까이 보기 · 운전석</small></button>
         </div>
@@ -79,41 +79,65 @@
       <button data-preset="noon" class="selected" aria-pressed="true"><span class="time-icon">☼</span><span>정오<small>12:00</small></span></button>
       <button data-preset="night"><span class="time-icon">☾</span><span>야간<small>20:35</small></span></button>
     </section>
-    <section id="raceTop" class="race-top hidden" aria-label="레이스 기록">
-      <div id="racePhase" class="race-phase">연결 중</div>
-      <div id="racePosition" class="race-position hidden"><b id="raceRank">—</b><span id="raceRankOf"></span></div>
-      <div id="raceClock" class="race-clock">—</div>
-      <div id="raceSub" class="race-sub"></div>
-      <ol id="raceSectors" class="race-sectors"><li><span>새벽</span><b>—</b></li><li><span>정오</span><b>—</b></li><li><span>야간</span><b>—</b></li></ol>
+    <!-- The race screen (11-16; the user, with a kart sim's onboard view: "유아이 인터페이스 보이지? 저렇게 해야 된다고. 맵도 전체가
+         아니라 일부분 확대 … 최대한 똑같이 간략하게", "텍스트 거의 없잖아"): numbers at the four corners in light type with a soft
+         shadow, no panels. Top left my place and the karts around me; top right the clock, the splits and the record; right the
+         notices; bottom left the road around me and the laps; bottom right the speed, the revs, the gear and the boosters.
+         src/race.js and src/main.js fill it, src/race-hud.css lays it out (phones: around the touch controls). The buttons,
+         the records and the hints are on the pause screen (#pausePanel) and in the settings. -->
+    <section id="driveHud" class="rh hidden" aria-label="주행 정보">
+      <div class="rh-tl">
+        <div id="racePosition" class="rh-place hidden"><b id="raceRank">—</b><span id="raceRankOf"></span><small>순위</small></div>
+        <ol id="boardLive" class="rh-board" aria-label="순위"></ol>
+        <p id="boardInfo" class="rh-info"></p>
+      </div>
+      <div id="raceTop" class="rh-tr" aria-label="레이스 기록">
+        <div class="rh-clock"><b id="raceClock"></b><small id="racePhase"></small></div>
+        <ol id="raceSectors" class="rh-splits"><li><i></i><b>—</b></li><li><i></i><b>—</b></li><li><i></i><b>—</b></li></ol>
+        <div id="bestEver" class="rh-best hidden"><small class="label">1위</small><i id="bestEverTime">—</i><b id="bestEverName">—</b></div>
+      </div>
+      <div id="raceNotices" class="rh-notices" aria-live="polite"></div>
+      <div class="rh-bl">
+        <canvas id="raceMap" class="rh-map" width="240" height="240" aria-label="내 주변 지도"></canvas>
+        <div id="raceLaps" class="rh-laps hidden"><b id="lap">1</b><span id="lapOf">1</span><small id="lapUnit">바퀴</small></div>
+        <p id="placeName" class="rh-where"></p>
+      </div>
+      <div class="rh-br">
+        <svg class="rh-rev" viewBox="0 0 300 150" aria-hidden="true" focusable="false"><path class="rh-rev-under" d="M22 140A100 100 0 0 1 122 40H290"/><path class="rh-rev-track" d="M22 140A100 100 0 0 1 122 40H290"/><path class="rh-rev-red" d="M249.4 40H290"/><path id="revFill" class="rh-rev-fill" pathLength="100" d="M22 140A100 100 0 0 1 122 40H290"/><g class="rh-rev-ticks"><line x1="22" y1="140" x2="28" y2="140"/><line x1="53.3" y1="67.3" x2="57.4" y2="71.7"/><line x1="127.5" y1="40" x2="127.5" y2="46"/><line x1="208.7" y1="40" x2="208.7" y2="46"/><line x1="290" y1="40" x2="290" y2="46"/><text x="11" y="140">0</text><text x="46.4" y="60">4</text><text x="127.5" y="29">8</text><text x="208.7" y="29">12</text><text x="290" y="29">16</text></g></svg>
+        <div id="booster" class="rh-boost" aria-label="부스터"><i><b></b><s></s></i><i><b></b><s></s></i><i><b></b><s></s></i></div>
+        <span id="gear" class="rh-gear">N</span>
+        <div class="rh-speed"><strong id="speed">0</strong><small>km/h</small></div>
+      </div>
+      <nav class="rh-icons" aria-label="주행 메뉴">
+        <button id="pauseButton" type="button" aria-label="일시정지 (ESC)" title="일시정지 · ESC"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><g class="icon-pause"><path d="M17.5 12v24M30.5 12v24"/></g><path class="icon-play" d="M18 11.5l19 12.5-19 12.5z"/></svg></button>
+        <button id="cameraButton" type="button" aria-label="시점 바꾸기 (C)" title="시점 · C · 휠"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M8.5 15.5h6.5l3-4.5h12l3 4.5h6.5a3 3 0 0 1 3 3v17a3 3 0 0 1-3 3h-31a3 3 0 0 1-3-3v-17a3 3 0 0 1 3-3z"/><circle cx="24" cy="26.5" r="7"/></svg></button>
+        <button id="settingsButton" type="button" aria-label="설정 열기" title="설정"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M7 14h17M35 14h6M7 24h6M24 24h17M7 34h13M31 34h10"/><circle cx="29.5" cy="14" r="4.5"/><circle cx="18.5" cy="24" r="4.5"/><circle cx="25.5" cy="34" r="4.5"/></svg></button>
+      </nav>
     </section>
-    <!-- The best lap ever, on screen all the time while driving (race.js fills it; it sits just before the standings, which make room for it). -->
-    <div id="bestEver" class="best-ever hidden"><span class="label">역대 1위</span><b id="bestEverName">—</b><i id="bestEverTime">—</i></div>
-    <aside id="leaderboard" class="leaderboard hidden" aria-label="리더보드">
-      <header><span id="boardTitle">대기실</span><small id="boardCount">연결 중</small></header>
-      <ol id="boardLive" class="board-list"></ol>
-      <h3 id="rankingTitle">전체 랭킹</h3>
-      <ol id="boardRecords" class="board-list records"></ol>
-      <footer>나 <b id="raceMe">—</b></footer>
-    </aside>
+    <!-- Paused (ESC, the button, the window losing focus): the buttons, this course's records and the controls, which the race
+         screen leaves out. A click or a tap outside the card carries on. -->
+    <section id="pausePanel" class="rh-pause" aria-label="일시정지">
+      <div class="rh-pause-card">
+        <h2>일시정지</h2>
+        <nav class="rh-pause-actions"><button type="button" data-pause="resume">계속</button><button type="button" data-pause="camera">시점</button><button type="button" id="resetButton">복귀</button><button type="button" data-pause="settings">설정</button><button type="button" data-pause="home">홈</button></nav>
+        <h3 id="rankingTitle">기록</h3>
+        <ol id="boardRecords" class="rh-ranking"></ol>
+        <p class="rh-keys rh-keys-desk"><span><kbd>W</kbd><kbd>S</kbd>가속 · 브레이크</span><span><kbd>A</kbd><kbd>D</kbd>조향</span><span><kbd>SPACE</kbd>드리프트</span><span><kbd>E</kbd>부스터 · 3개면 한 번에</span><span><kbd>C</kbd>휠 시점</span><span><kbd>R</kbd>복귀</span><span><kbd>ESC</kbd>계속</span><span>드리프트가 끝나는 순간 가속: 순간 부스터</span></p>
+        <p class="rh-keys rh-keys-touch"><span>왼손: 누른 곳에서 좌우로 끌어 조향</span><span>오른손: 가속 · 브레이크 · 드리프트 · 부스터</span><span>두 손가락: 시점</span><span>드리프트가 끝나는 순간 가속: 순간 부스터</span></p>
+        <p class="rh-credits">© OpenStreetMap contributors · 공원 형상: Dongtan Luna</p>
+      </div>
+    </section>
     <section id="roomPanel" class="room-panel hidden" aria-label="방">
       <div class="room-head"><span class="room-label">방</span><b id="roomCode">----</b><button id="roomInvite" type="button" class="room-invite">초대 링크</button></div>
       <ul id="roomPlayers" class="room-players"></ul>
       <button id="roomStart" type="button" class="room-start">출발</button>
       <p id="roomWait" class="room-wait">방장이 출발하기를 기다리는 중</p>
     </section>
-    <div id="booster" class="booster hidden" aria-label="부스터"><div class="booster-slots" aria-hidden="true"><i></i><i></i><i></i></div><div class="booster-gauge"><i id="boosterFill"></i></div><b>BOOST</b><span id="boosterState">20초</span><kbd>E</kbd></div>
     <div id="countdown" class="countdown hidden" aria-live="assertive"><span id="countdownText">3</span></div>
-    <section id="results" class="results hidden" aria-label="레이스 결과"><h2>레이스 결과</h2><ol id="resultsList" class="board-list"></ol><p id="resultsNote"></p></section>
+    <section id="results" class="results hidden" aria-label="레이스 결과"><h2>결과</h2><div class="rh-results-bar" aria-hidden="true"><i id="resultsBar"></i></div><ol id="resultsList" class="rh-board"></ol><p id="resultsNote"></p></section>
     <div id="nameLabels" class="name-labels" aria-hidden="true"></div>
     <div id="fade" class="fade"></div>
-    <section id="driveHud" class="drive-hud hidden" aria-label="주행 정보">
-      <div class="speed"><strong id="speed">0</strong><span>km/h</span><small id="gear">READY</small></div>
-      <div class="journey"><div><span id="placeName">호수 둘레길</span><span id="distance">0 / 2,083 m</span></div><div class="track"><i id="progress"></i></div></div>
-    </section>
-    <aside class="map-panel"><div class="map-title"><span>LAKE LOOP</span><span>N ↑</span></div><canvas id="minimap" width="440" height="370" aria-label="현재 위치 미니맵"></canvas><div class="map-bottom"><span class="map-dot"></span><span>출발선</span><span id="lap">LAP 01</span></div></aside>
-    <div class="bottom-left"><span id="performance" title="실제 그린 프레임 수. 프레임 생성 없음">— fps</span><span class="separator"></span><span id="qualityLabel">HIGH · 1080p</span><button id="statsButton" class="text-button">상세</button></div>
     <section class="show-player" aria-label="음악 분수쇼"><div><span class="show-dot"></span><strong id="showTitle">음악 분수</strong><time id="showClock">0:00</time></div><nav><button id="showNext" aria-label="다른 음악 분수쇼">다음 곡 ↗</button><label>음량 <input id="showVolume" type="range" min="0" max="1" step=".01" value=".2" /></label></nav></section>
-    <nav id="driveControls" class="drive-controls hidden" aria-label="주행 조작"><span><kbd>W</kbd><kbd>S</kbd>가속 · 브레이크/후진</span><span><kbd>A</kbd><kbd>D</kbd>조향</span><span><kbd>SPACE</kbd>드리프트</span><span><kbd>E</kbd>부스터</span><span><kbd>휠</kbd>확대 · 축소</span><button id="cameraButton">시점 <kbd>C</kbd></button><button id="resetButton">복귀 <kbd>R</kbd></button><button id="pauseButton">일시정지 <kbd>ESC</kbd></button></nav>
     <div id="touchControls" class="touch-controls hidden">
       <!-- Steering: the pad appears under the thumb anywhere in this zone and is dragged sideways (src/touch-controls.js). -->
       <div id="steerPad" class="steer-zone" role="group" aria-label="조향: 누른 곳에서 좌우로 끌기"><i class="steer-base"><svg viewBox="0 0 196 72" aria-hidden="true" focusable="false"><rect x="2" y="2" width="192" height="68" rx="34"/><path d="M27 27l-10 9 10 9M169 27l10 9-10 9"/></svg></i><i class="steer-knob"><svg viewBox="0 0 60 60" aria-hidden="true" focusable="false"><circle cx="30" cy="30" r="27"/><path d="M23 21v18M30 18v24M37 21v18"/></svg></i></div>
@@ -129,7 +153,7 @@
         <button id="touchSettings" class="touch-mini" aria-label="설정"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M7 14h17M35 14h6M7 24h6M24 24h17M7 34h13M31 34h10"/><circle cx="29.5" cy="14" r="4.5"/><circle cx="18.5" cy="24" r="4.5"/><circle cx="25.5" cy="34" r="4.5"/></svg></button>
       </div>
     </div>
-    <dialog id="settings"><form method="dialog"><div class="dialog-head"><h2>주행 설정</h2><button aria-label="설정 닫기" class="icon-button">×</button></div><label>그래픽<select id="quality"><option value="high">높음</option><option value="balanced">균형</option><option value="low">성능 우선</option></select></label><label>최대 렌더 해상도<select id="resolution"><option value="1080">1920 × 1080</option><option value="1440">2560 × 1440</option><option value="2160">3840 × 2160</option><option value="900">1600 × 900</option><option value="720">1280 × 720</option><option value="576">1024 × 576</option></select></label><label>시점<select id="cameraMode"><option value="cockpit">운전석</option><option value="close">바로 뒤</option><option value="high">뒤 위</option><option value="chase" selected>중간</option><option value="wide">멀리</option></select></label><label class="toggle">효과음<input id="sound" type="checkbox" checked></label><label class="level">효과음 크기<input id="sfxVolume" type="range" min="0" max="100" step="1" value="62" aria-label="효과음 크기"><output id="sfxVolumeValue">62</output></label><label class="level">배경음 크기<input id="musicVolume" type="range" min="0" max="100" step="1" value="20" aria-label="배경음 크기"><output id="musicVolumeValue">20</output></label><p id="musicVolumeNote" class="settings-note" hidden>이 기기(아이폰·아이패드)는 배경음을 켜고 끄기만 됩니다. 전체 크기는 기기 음량 버튼으로, 효과음과의 균형은 효과음 크기로 맞춥니다.</p><p class="settings-note">WASD 또는 방향키로 운전합니다. E 부스터(20초마다 하나 · 드리프트를 길게 하면 더 빨리, 3개까지 모이고 3개면 한 번에 더 세고 길게), SPACE를 누른 채 방향키로 드리프트 · 드리프트가 끝나는 순간 가속을 다시 누르면 순간 부스터.<br>화면을 끌면 주위를 둘러볼 수 있습니다.</p><button id="modeSwitch" class="secondary" type="button">원본 형상으로 보기 (고사양 PC)</button><button id="exportMetrics" class="secondary" type="button">성능 기록 내려받기</button></form></dialog>
+    <dialog id="settings"><form method="dialog"><div class="dialog-head"><h2>주행 설정</h2><button aria-label="설정 닫기" class="icon-button">×</button></div><label>그래픽<select id="quality"><option value="high">높음</option><option value="balanced">균형</option><option value="low">성능 우선</option></select></label><label>최대 렌더 해상도<select id="resolution"><option value="1080">1920 × 1080</option><option value="1440">2560 × 1440</option><option value="2160">3840 × 2160</option><option value="900">1600 × 900</option><option value="720">1280 × 720</option><option value="576">1024 × 576</option></select></label><label>시점<select id="cameraMode"><option value="cockpit">운전석</option><option value="close">바로 뒤</option><option value="high">뒤 위</option><option value="chase" selected>중간</option><option value="wide">멀리</option></select></label><div class="settings-times" role="group" aria-label="시간대 (자유 주행)"><span>시간대</span><div><button type="button" data-preset="dawn">새벽</button><button type="button" data-preset="noon" class="selected" aria-pressed="true">정오</button><button type="button" data-preset="night">야간</button></div></div><label class="toggle">효과음<input id="sound" type="checkbox" checked></label><label class="level">효과음 크기<input id="sfxVolume" type="range" min="0" max="100" step="1" value="62" aria-label="효과음 크기"><output id="sfxVolumeValue">62</output></label><label class="level">배경음 크기<input id="musicVolume" type="range" min="0" max="100" step="1" value="20" aria-label="배경음 크기"><output id="musicVolumeValue">20</output></label><p id="musicVolumeNote" class="settings-note" hidden>이 기기(아이폰·아이패드)는 배경음을 켜고 끄기만 됩니다. 전체 크기는 기기 음량 버튼으로, 효과음과의 균형은 효과음 크기로 맞춥니다.</p><p class="settings-note">WASD 또는 방향키로 운전합니다. E 부스터(20초마다 하나 · 드리프트를 길게 하면 더 빨리, 3개까지 모이고 3개면 한 번에 더 세고 길게), SPACE를 누른 채 방향키로 드리프트 · 드리프트가 끝나는 순간 가속을 다시 누르면 순간 부스터.<br>화면을 끌면 주위를 둘러볼 수 있습니다.</p><button id="modeSwitch" class="secondary" type="button">원본 형상으로 보기 (고사양 PC)</button><button id="exportMetrics" class="secondary" type="button">성능 기록 내려받기</button><p class="settings-perf"><span id="performance" title="실제 그린 프레임 수. 프레임 생성 없음">— fps</span><span id="qualityLabel">—</span><button id="statsButton" type="button" class="text-button">상세</button></p><p class="settings-credits">© OpenStreetMap contributors · 공원 형상: Dongtan Luna</p></form></dialog>
     <section id="stats" class="stats hidden" aria-label="성능 측정"><header>실제 렌더링 <button id="closeStats" aria-label="성능 패널 닫기">×</button></header><pre id="statsText"></pre></section>
     <div id="toast" class="toast" role="status"></div>
     <footer class="credits">© OpenStreetMap contributors · 공원 형상: Dongtan Luna</footer>
@@ -139,7 +163,7 @@
     function load(src,type){return new Promise((resolve,reject)=>{const s=document.createElement('script');if(type)s.type=type;s.src=src;s.onload=resolve;s.onerror=()=>reject(Error('실행 파일을 열지 못했습니다. 배포 폴더가 함께 있는지 확인해 주세요.'));document.body.append(s);});}
     try{
       if(location.protocol==='file:'){const css=document.createElement('link');css.rel='stylesheet';css.href='./offline/app.css';document.head.append(css);await load('./offline/assets.js');await load('./offline/app.js');}
-      else await load("./assets/index-Duyixs93.js",'module');
+      else await load("./assets/index-B8ubr4Kq.js",'module');
     }catch(error){document.getElementById('loadStatus').textContent=error.message;document.getElementById('startLabel').textContent='실행 자료를 확인해 주세요';window.lunaError={message:error.message};}
   });
 </script>
