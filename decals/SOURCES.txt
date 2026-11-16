@@ -10,5 +10,6 @@ nb-* 562장: 사용자 저장소 kraizer-ai/naebang, 현재 스냅샷 62b7dae.
 각 항목의 원래 파일명과 생성 출처는 manifest.json에 남겼다.
 
 새 luna-* 및 auto-* 그림: 이 작업에서 OpenAI 내장 image_gen으로 한 그림씩 새로 만든 게임용 그림.
+처음 luna-* 15종과 추가 auto-* 202종이며, nb-*를 합친 전체는 779종이다.
 실재 기업의 로고를 요청하거나 복제하지 않았다. 투명 PNG의 알파를 보존해 512px 이하 WebP로 변환했다.
 생성 프롬프트와 원본 PNG는 out/web_drive/codex/decals/에 보관한다.
