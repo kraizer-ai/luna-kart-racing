@@ -1,1 +1,1 @@
-{"schema":"luna-course-surface-v1","source":"docs/walk/courses.json line.surface within 3 m, else the course's own runs","course":"hill","length":1395.81,"runs":[[0,"concrete"],[50.5,"asphalt"],[1104.48,"deck"],[1349.47,"concrete"]]}
+{"schema":"luna-course-surface-v1","source":"docs/walk/courses.json line.surface within 3 m, else the course's own runs","course":"hill","length":1395.81,"runs":[[0,"asphalt"],[1107.48,"deck"],[1349.47,"asphalt"]]}
