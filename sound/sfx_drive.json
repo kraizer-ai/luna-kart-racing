@@ -5,7 +5,7 @@
   "ogg": "sfx_drive.ogg",
   "m4a": "sfx_drive.m4a"
  },
- "seconds": 135.619,
+ "seconds": 128.344,
  "items": {
   "roll_asphalt": {
    "kind": "loop",
@@ -14,245 +14,251 @@
   },
   "roll_deck": {
    "kind": "loop",
-   "start": 20.65,
-   "end": 29.65
+   "start": 18.65,
+   "end": 23.65
   },
   "roll_glass": {
    "kind": "loop",
-   "start": 35.75,
-   "end": 38.75
+   "start": 27.75,
+   "end": 30.75
   },
   "roll_off": {
    "kind": "loop",
-   "start": 44.35,
-   "end": 52.35
+   "start": 36.35,
+   "end": 44.35
   },
   "roll_grass": {
    "kind": "loop",
-   "start": 57.95,
-   "end": 60.95
+   "start": 49.95,
+   "end": 52.95
   },
   "spin_gravel": {
    "kind": "loop",
-   "start": 63.75,
-   "end": 66.15
+   "start": 55.75,
+   "end": 58.15
   },
   "kerb": {
    "kind": "loop",
-   "start": 68.7,
-   "end": 71.2
+   "start": 60.7,
+   "end": 63.2
   },
   "squeal": {
    "kind": "loop",
-   "start": 73.8,
-   "end": 76.3
+   "start": 65.8,
+   "end": 68.3
   },
   "drift": {
    "kind": "loop",
-   "start": 78.95,
-   "end": 81.55
+   "start": 70.95,
+   "end": 73.55
   },
   "wind": {
    "kind": "loop",
-   "start": 87.45,
-   "end": 96.45
+   "start": 79.45,
+   "end": 88.45
   },
   "scrape": {
    "kind": "loop",
-   "start": 102.3,
-   "end": 104.8
+   "start": 94.3,
+   "end": 96.8
   },
   "skid": {
    "kind": "shot",
-   "start": 106.105,
-   "end": 107.205,
+   "start": 98.105,
+   "end": 99.205,
    "group": "skid"
   },
   "bump": {
    "kind": "shot",
-   "start": 107.23,
-   "end": 107.73,
+   "start": 99.23,
+   "end": 99.73,
    "group": "bump"
   },
   "bump_hard": {
    "kind": "shot",
-   "start": 107.755,
-   "end": 108.555,
+   "start": 99.755,
+   "end": 100.555,
    "group": "bump_hard"
   },
   "hit_light1": {
    "kind": "shot",
-   "start": 108.58,
-   "end": 109.28,
+   "start": 100.58,
+   "end": 101.28,
    "group": "hit_light"
   },
   "hit_light2": {
    "kind": "shot",
-   "start": 109.305,
-   "end": 110.005,
+   "start": 101.305,
+   "end": 102.005,
    "group": "hit_light"
   },
   "hit_light3": {
    "kind": "shot",
-   "start": 110.03,
-   "end": 110.73,
+   "start": 102.03,
+   "end": 102.73,
    "group": "hit_light"
   },
   "hit_light4": {
    "kind": "shot",
-   "start": 110.755,
-   "end": 111.273,
+   "start": 102.755,
+   "end": 103.273,
    "group": "hit_light"
   },
   "hit_hard": {
    "kind": "shot",
-   "start": 111.298,
-   "end": 112.698,
+   "start": 103.298,
+   "end": 104.698,
    "group": "hit_hard"
   },
   "debris1": {
    "kind": "shot",
-   "start": 112.723,
-   "end": 113.323,
+   "start": 104.723,
+   "end": 105.323,
    "group": "debris"
   },
   "debris2": {
    "kind": "shot",
-   "start": 113.348,
-   "end": 113.948,
+   "start": 105.348,
+   "end": 105.948,
    "group": "debris"
   },
   "grind1": {
    "kind": "shot",
-   "start": 113.973,
-   "end": 114.223,
+   "start": 105.973,
+   "end": 106.223,
    "group": "grind"
   },
   "grind2": {
    "kind": "shot",
-   "start": 114.248,
-   "end": 114.498,
+   "start": 106.248,
+   "end": 106.498,
    "group": "grind"
   },
   "grind3": {
    "kind": "shot",
-   "start": 114.523,
-   "end": 114.773,
+   "start": 106.523,
+   "end": 106.773,
    "group": "grind"
   },
   "land": {
    "kind": "shot",
-   "start": 114.798,
-   "end": 115.466021,
+   "start": 106.798,
+   "end": 107.466021,
    "group": "land"
   },
   "thump1": {
    "kind": "shot",
-   "start": 115.491021,
-   "end": 115.671021,
+   "start": 107.491021,
+   "end": 107.671021,
    "group": "thump"
   },
   "thump2": {
    "kind": "shot",
-   "start": 115.696021,
-   "end": 115.876021,
+   "start": 107.696021,
+   "end": 107.876021,
    "group": "thump"
   },
   "thump3": {
    "kind": "shot",
-   "start": 115.901021,
-   "end": 116.081021,
+   "start": 107.901021,
+   "end": 108.081021,
    "group": "thump"
   },
   "thump4": {
    "kind": "shot",
-   "start": 116.106021,
-   "end": 116.286021,
+   "start": 108.106021,
+   "end": 108.286021,
    "group": "thump"
   },
   "tick": {
    "kind": "shot",
-   "start": 116.311021,
-   "end": 116.385625,
+   "start": 108.311021,
+   "end": 108.385625,
    "group": "tick"
   },
   "boost": {
    "kind": "shot",
-   "start": 116.410625,
-   "end": 117.975396,
+   "start": 108.410625,
+   "end": 109.975396,
    "group": "boost"
   },
   "whoosh": {
    "kind": "shot",
-   "start": 118.000396,
-   "end": 118.500396,
+   "start": 110.000396,
+   "end": 110.500396,
    "group": "whoosh"
   },
   "reset": {
    "kind": "shot",
-   "start": 118.525396,
-   "end": 120.125396,
+   "start": 110.525396,
+   "end": 112.125396,
    "group": "reset"
   },
   "light": {
    "kind": "shot",
-   "start": 120.150396,
-   "end": 120.600396,
+   "start": 112.150396,
+   "end": 112.600396,
    "group": "light"
   },
   "bell": {
    "kind": "shot",
-   "start": 120.625396,
-   "end": 122.825396,
+   "start": 112.625396,
+   "end": 114.825396,
    "group": "bell"
   },
   "finish": {
    "kind": "shot",
-   "start": 122.850396,
-   "end": 125.350396,
+   "start": 114.850396,
+   "end": 117.350396,
    "group": "finish"
   },
   "cheer": {
    "kind": "shot",
-   "start": 125.375396,
-   "end": 130.375396,
+   "start": 117.375396,
+   "end": 122.375396,
    "group": "cheer"
   },
   "charge": {
    "kind": "shot",
-   "start": 130.400396,
-   "end": 130.475,
+   "start": 122.400396,
+   "end": 122.475,
    "group": "charge"
   },
   "charge_full": {
    "kind": "shot",
-   "start": 130.5,
-   "end": 130.89875,
+   "start": 122.5,
+   "end": 122.89875,
    "group": "charge_full"
   },
   "coins1": {
    "kind": "shot",
-   "start": 130.92375,
-   "end": 131.72375,
+   "start": 122.92375,
+   "end": 123.72375,
    "group": "coins"
   },
   "coins2": {
    "kind": "shot",
-   "start": 131.74875,
-   "end": 132.54875,
+   "start": 123.74875,
+   "end": 124.54875,
    "group": "coins"
   },
   "coins3": {
    "kind": "shot",
-   "start": 132.57375,
-   "end": 133.37375,
+   "start": 124.57375,
+   "end": 125.37375,
    "group": "coins"
   },
   "splash1": {
    "kind": "shot",
-   "start": 133.39875,
-   "end": 135.59875,
+   "start": 125.39875,
+   "end": 127.59875,
    "group": "splash"
+  },
+  "bump_hard1": {
+   "kind": "shot",
+   "start": 127.62375,
+   "end": 128.32375,
+   "group": "bump_hard"
   }
  }
 }

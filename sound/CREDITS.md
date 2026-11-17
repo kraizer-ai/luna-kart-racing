@@ -30,19 +30,20 @@ with Stable Audio Open. Every file below was checked on its source page. The spr
 
 Set C uses the same files as A, pitched up 30 %.
 
-## Engine set B — Ferrari V8 (`engine_b.*`)
+## Engine set B — Ferrari V8 (`engine_b.*`) — everyone's sound since 2026-11-17
 | Use | Source | Author | Licence |
 |---|---|---|---|
 | on/off-throttle stretches, a blip | [ferrari355underhood4.mp3](https://freesound.org/people/enginemusic/sounds/43484/) | enginemusic | **CC BY 3.0** — "ferrari355underhood4.mp3" by enginemusic (https://freesound.org/s/43484/), licensed under CC BY 3.0 |
 | idle, revs | [Ferrari 360 Spider - engine sound](https://freesound.org/people/PritzProductions/sounds/241083/) | PritzProductions | CC0 1.0 |
-| fly-bys | as set A (Ears68, CC0) | | |
+| fly-bys (V8 race car passing, Doppler) | generated: "a Ferrari V8 race car passes by very fast at a race track …" (seeds 501, 503) | Stable Audio 3.0 small-sfx / medium | Stability AI Community License (Powered by Stability AI); its text encoder T5Gemma under the Gemma Terms of Use |
 | crackles | as set A (Stable Audio Open) | | |
 
 ## Driving, contact and race sounds (`sfx_drive.*`)
 | Sound | Source | Author | Licence |
 |---|---|---|---|
 | asphalt roll | [inside car 90 km asphalt 190710_0056.wav](https://freesound.org/people/klankbeeld/sounds/612011/) | klankbeeld | **CC BY 4.0** — "inside car 90 km asphalt 190710_0056.wav" by klankbeeld (https://freesound.org/s/612011/), licensed under CC BY 4.0 |
-| wooden deck roll, deck thumps | [Skateboard rolling down wooden bridge.wav](https://freesound.org/people/Bruno_Garcez/sounds/243762/) (Pixabay copy: [link](https://pixabay.com/sound-effects/city-skateboard-rolling-down-wooden-bridge-74284/)) | Bruno_Garcez | CC0 1.0 |
+| wooden deck roll | generated: "a cart driving over wooden bridge planks at speed, deep hollow wood resonance and regular clack clack of the boards …" (seed 212) | Stable Audio 3.0 small-sfx | Stability AI Community License (Powered by Stability AI) |
+| deck joist thumps | [Skateboard rolling down wooden bridge.wav](https://freesound.org/people/Bruno_Garcez/sounds/243762/) (Pixabay copy: [link](https://pixabay.com/sound-effects/city-skateboard-rolling-down-wooden-bridge-74284/)) | Bruno_Garcez | CC0 1.0 |
 | glass road roll | [Skateboard rolling down concrete ramp.wav](https://freesound.org/people/Bruno_Garcez/sounds/243765/) | Bruno_Garcez | CC0 1.0 |
 | off-track gravel/dirt roll | [car tire on gravel rear cu blyth 21 6 12.flac](https://freesound.org/people/TRP/sounds/577504/) (Pixabay copy: [link](https://pixabay.com/sound-effects/city-car-tire-on-gravel-rear-cu-blyth-21-6-12-25895/)) | TRP | CC0 1.0 |
 | off-track grass | [Bike_On_Grass_OS.wav](https://freesound.org/people/KevinDuffy1234/sounds/340197/) | KevinDuffy1234 | CC0 1.0 |
@@ -57,6 +58,7 @@ Set C uses the same files as A, pitched up 30 %.
 | hard hit | [Car Crash_EXT.wav](https://freesound.org/people/PauliusI/sounds/346299/) (Pixabay copy: [link](https://pixabay.com/sound-effects/city-car-crash-ext-6388/)) | PauliusI | CC0 1.0 |
 | kart bump | [PlasticImpactA9.wav](https://freesound.org/people/jomse/sounds/525099/) | jomse | CC0 1.0 |
 | hard bump | [S022_Plastic_Impact_Mono.wav](https://freesound.org/people/P%C3%B3l/sounds/385940/) | Pól | CC0 1.0 |
+| hard bump (second take) | generated: "plastic bumper of a go-kart hits another kart from behind, loud plastic thud with a crack" (seed 312) | Stable Audio 3.0 medium | Stability AI Community License |
 | bits and debris | [flashlight … fall on gritty concrete … impact.wav](https://freesound.org/people/kyles/sounds/452622/) | kyles | CC0 1.0 |
 | landing | [S019_Landing_Impact_Mono.wav](https://freesound.org/people/P%C3%B3l/sounds/385933/) | Pól | CC0 1.0 |
 | booster flame | [Fire Torch_Whoosh 2(medium speed).wav](https://freesound.org/people/kev_durr/sounds/426209/) | kev_durr | **CC BY 4.0** — "Fire Torch_Whoosh 2(medium speed).wav" by kev_durr (https://freesound.org/s/426209/), licensed under CC BY 4.0 |
@@ -73,3 +75,32 @@ Set C uses the same files as A, pitched up 30 %.
 
 Generated clips (Stable Audio Open 1.0, local, seeds and prompts recorded in the worker's generation log): crackles
 (seeds 41, 42), F1 fly-by (seed 32), tyre scrub (seed 121), wall scrape (seeds 141, 142).
+
+## Park ambience (`sfx_world.*`)
+| Bed | Source | Author | Licence |
+|---|---|---|---|
+| fountain jets (fountain circuit) | [Urban Fountain (San Francisco)](https://freesound.org/s/237430/) | mhtaylor67 | CC0 1.0 |
+| lake | [Waves gentle med cu lake water](https://freesound.org/s/573191/) | TRP | CC0 1.0 |
+| birds by day | [Bird Park Ambience](https://freesound.org/s/234315/) | nick121087 | CC0 1.0 |
+| far city | [City hum #1](https://freesound.org/s/179117/) | morosopher | CC0 1.0 |
+| night crickets | [Ambiance_Nature_Night_Cricket_Calm_Loop_Stereo.wav](https://freesound.org/s/637083/) | Nox_Sound | CC0 1.0 |
+| leaves in a breeze | [Wind in a tree, close to the foliage](https://freesound.org/s/167434/) | felix.blume | CC0 1.0 |
+
+## Menus, garage, shop and rooms (`sfx_ui.*`)
+| Sound | Source (author) | Licence |
+|---|---|---|
+| button clicks | [buttons click pastic.wav](https://freesound.org/s/545527/) (rsellick) | CC0 1.0 |
+| swish (close, back) | [Swishes and swooshes](https://freesound.org/s/447808/) (florianreichelt) | CC0 1.0 |
+| toggles | [Flipping Light Switch 5](https://freesound.org/s/840876/) (justamudkip) | CC0 1.0 |
+| paint spray | [paint_shake_and_spray.wav](https://freesound.org/s/707374/) (Mohagged) | CC0 1.0 |
+| decal peel | [sticker peel.flac](https://freesound.org/s/27976/) (tim.kahn) | **CC BY 4.0** — "sticker peel.flac" by tim.kahn (https://freesound.org/s/27976/), licensed under CC BY 4.0 |
+| pencil (pixel drawing) | [Pen or marker writing on paper - close up](https://freesound.org/s/565206/) (khenshom) | CC0 1.0 |
+| eraser (delete) | [erasing .wav](https://freesound.org/s/486378/) (an_na_ba_na_na) | CC0 1.0 |
+| swatch tap | [Credit card tap.wav](https://freesound.org/s/588325/) (honeybunny_) | CC0 1.0 |
+| ratchet, air impact wrench (fitting) | [Ratchet Wrench Slow Multiple](https://freesound.org/s/591528/) (Rudmer_Rotteveel), [Air Impact Wrench](https://freesound.org/s/349398/) (sevenbsb) | CC0 1.0 |
+| latch (fitted) | [LATCH (Metallic)](https://freesound.org/s/480869/) (C3Sabertooth) | CC0 1.0 |
+| coins, purchase | [Coins](https://freesound.org/s/174629/) (altfuture), [old cash register open and close with a bing](https://freesound.org/s/584168/) (clubmydia+) | CC0 1.0 |
+| ready, all ready | [GoStoneSounds.ogg](https://freesound.org/s/588317/) (billhails2), [several shots of doorbell.wav](https://freesound.org/s/640767/) (fabiopx) | CC0 1.0 |
+| join, leave | [Shop door bell.wav](https://freesound.org/s/494565/) (775noise), [Wooden door 1 …](https://freesound.org/s/342873/) (Pfannkuchn) | CC0 1.0 |
+
+Stable Audio 3.0 generations: local, 8 steps, prompts and seeds in the worker's generation log.

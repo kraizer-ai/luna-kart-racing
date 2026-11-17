@@ -1,0 +1,41 @@
+{
+ "schema": "luna-sfx-bank-v1",
+ "name": "sfx_world",
+ "files": {
+  "ogg": "sfx_world.ogg",
+  "m4a": "sfx_world.m4a"
+ },
+ "seconds": 132.6,
+ "items": {
+  "amb_fountain": {
+   "kind": "loop",
+   "start": 5.05,
+   "end": 15.05
+  },
+  "amb_lake": {
+   "kind": "loop",
+   "start": 25.15,
+   "end": 35.15
+  },
+  "amb_birds": {
+   "kind": "loop",
+   "start": 46.25,
+   "end": 58.25
+  },
+  "amb_city": {
+   "kind": "loop",
+   "start": 70.35,
+   "end": 82.35
+  },
+  "amb_night": {
+   "kind": "loop",
+   "start": 94.45,
+   "end": 106.45
+  },
+  "amb_trees": {
+   "kind": "loop",
+   "start": 117.55,
+   "end": 127.55
+  }
+ }
+}

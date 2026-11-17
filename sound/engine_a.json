@@ -5,7 +5,7 @@
   "ogg": "engine_a.ogg",
   "m4a": "engine_a.m4a"
  },
- "seconds": 78.606,
+ "seconds": 70.9,
  "engine": {
   "f0Idle": 215,
   "f0Max": 543,
@@ -4591,143 +4591,137 @@
    "end": 38.98,
    "group": "launch"
   },
-  "flyby1": {
-   "kind": "shot",
-   "start": 39.005,
-   "end": 41.605,
-   "group": "flyby"
-  },
-  "flyby2": {
-   "kind": "shot",
-   "start": 41.63,
-   "end": 44.03,
-   "group": "flyby"
-  },
-  "flyby3": {
-   "kind": "shot",
-   "start": 44.055,
-   "end": 46.0365,
-   "group": "flyby"
-  },
-  "flyby4": {
-   "kind": "shot",
-   "start": 46.0615,
-   "end": 48.1615,
-   "group": "flyby"
-  },
-  "flyby5": {
-   "kind": "shot",
-   "start": 48.1865,
-   "end": 50.2865,
-   "group": "flyby"
-  },
   "pop1": {
    "kind": "shot",
-   "start": 50.3115,
-   "end": 50.7615,
+   "start": 39.005,
+   "end": 39.455,
    "group": "pop"
   },
   "pop2": {
    "kind": "shot",
-   "start": 50.7865,
-   "end": 51.2365,
+   "start": 39.48,
+   "end": 39.93,
    "group": "pop"
   },
   "pop3": {
    "kind": "shot",
-   "start": 51.2615,
-   "end": 51.7115,
+   "start": 39.955,
+   "end": 40.405,
    "group": "pop"
   },
   "pop4": {
    "kind": "shot",
-   "start": 51.7365,
-   "end": 52.1865,
+   "start": 40.43,
+   "end": 40.88,
    "group": "pop"
   },
   "pop5": {
    "kind": "shot",
-   "start": 52.2115,
-   "end": 52.6615,
+   "start": 40.905,
+   "end": 41.355,
    "group": "pop"
   },
   "pop6": {
    "kind": "shot",
-   "start": 52.6865,
-   "end": 53.1365,
+   "start": 41.38,
+   "end": 41.83,
    "group": "pop"
   },
   "pop7": {
    "kind": "shot",
-   "start": 53.1615,
-   "end": 53.6115,
+   "start": 41.855,
+   "end": 42.305,
    "group": "pop"
   },
   "crack1": {
    "kind": "shot",
-   "start": 53.6365,
-   "end": 53.8365,
+   "start": 42.33,
+   "end": 42.53,
    "group": "crack"
   },
   "crack2": {
    "kind": "shot",
-   "start": 53.8615,
-   "end": 54.0615,
+   "start": 42.555,
+   "end": 42.755,
    "group": "crack"
   },
   "crack3": {
    "kind": "shot",
-   "start": 54.0865,
-   "end": 54.2865,
+   "start": 42.78,
+   "end": 42.98,
    "group": "crack"
-  },
-  "flyby6": {
-   "kind": "shot",
-   "start": 54.3115,
-   "end": 61.8115,
-   "group": "flyby"
-  },
-  "vten1": {
-   "kind": "shot",
-   "start": 61.8365,
-   "end": 64.8365,
-   "group": "vten"
-  },
-  "vten2": {
-   "kind": "shot",
-   "start": 64.8615,
-   "end": 68.0615,
-   "group": "vten"
-  },
-  "vten3": {
-   "kind": "shot",
-   "start": 68.0865,
-   "end": 71.0865,
-   "group": "vten"
-  },
-  "vten4": {
-   "kind": "shot",
-   "start": 71.1115,
-   "end": 74.3115,
-   "group": "vten"
   },
   "rev1": {
    "kind": "shot",
-   "start": 74.3365,
-   "end": 75.7365,
+   "start": 43.005,
+   "end": 44.405,
    "group": "rev"
   },
   "rev2": {
    "kind": "shot",
-   "start": 75.7615,
-   "end": 77.1615,
+   "start": 44.43,
+   "end": 45.83,
    "group": "rev"
   },
   "rev3": {
    "kind": "shot",
-   "start": 77.1865,
-   "end": 78.5865,
+   "start": 45.855,
+   "end": 47.255,
    "group": "rev"
+  },
+  "flyby1": {
+   "kind": "shot",
+   "start": 47.28,
+   "end": 49.88,
+   "group": "flyby"
+  },
+  "flyby2": {
+   "kind": "shot",
+   "start": 49.905,
+   "end": 52.505,
+   "group": "flyby"
+  },
+  "flyby3": {
+   "kind": "shot",
+   "start": 52.53,
+   "end": 55.13,
+   "group": "flyby"
+  },
+  "flyby4": {
+   "kind": "shot",
+   "start": 55.155,
+   "end": 57.755,
+   "group": "flyby"
+  },
+  "flyby5": {
+   "kind": "shot",
+   "start": 57.78,
+   "end": 60.38,
+   "group": "flyby"
+  },
+  "vten1": {
+   "kind": "shot",
+   "start": 60.405,
+   "end": 63.005,
+   "group": "vten"
+  },
+  "vten2": {
+   "kind": "shot",
+   "start": 63.03,
+   "end": 65.63,
+   "group": "vten"
+  },
+  "vten3": {
+   "kind": "shot",
+   "start": 65.655,
+   "end": 68.255,
+   "group": "vten"
+  },
+  "vten4": {
+   "kind": "shot",
+   "start": 68.28,
+   "end": 70.88,
+   "group": "vten"
   }
  }
 }

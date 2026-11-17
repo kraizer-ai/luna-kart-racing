@@ -5,7 +5,7 @@
   "ogg": "engine_b.ogg",
   "m4a": "engine_b.m4a"
  },
- "seconds": 56.606,
+ "seconds": 50.5,
  "engine": {
   "f0Idle": 68,
   "f0Max": 253,
@@ -4157,28 +4157,22 @@
    "end": 42.005,
    "group": "crack"
   },
-  "flyby6": {
-   "kind": "shot",
-   "start": 42.03,
-   "end": 49.53,
-   "group": "flyby"
-  },
   "flyby1": {
    "kind": "shot",
-   "start": 49.555,
-   "end": 52.155,
+   "start": 42.03,
+   "end": 44.83,
    "group": "flyby"
   },
   "flyby2": {
    "kind": "shot",
-   "start": 52.18,
-   "end": 54.58,
+   "start": 44.855,
+   "end": 47.655,
    "group": "flyby"
   },
   "flyby3": {
    "kind": "shot",
-   "start": 54.605,
-   "end": 56.5865,
+   "start": 47.68,
+   "end": 50.48,
    "group": "flyby"
   }
  }
