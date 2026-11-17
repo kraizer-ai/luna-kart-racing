@@ -104,3 +104,12 @@ Generated clips (Stable Audio Open 1.0, local, seeds and prompts recorded in the
 | join, leave | [Shop door bell.wav](https://freesound.org/s/494565/) (775noise), [Wooden door 1 …](https://freesound.org/s/342873/) (Pfannkuchn) | CC0 1.0 |
 
 Stable Audio 3.0 generations: local, 8 steps, prompts and seeds in the worker's generation log.
+
+## Luna Roadster: electric motor (`engine_ev.*`) and boost hover (`sfx_ev.*`) — behind a flag until the skin ships
+| Sound | Source | Author | Licence |
+|---|---|---|---|
+| motor whine (steady stretches, bent by the playback rate with the speed) | generated: "onboard recording of an electric race car at constant high speed on a straight, steady high-pitched electric motor whine and gear whine …" (seeds 923, 924, 926) | Stable Audio 3.0 small-sfx | Stability AI Community License (Powered by Stability AI); T5Gemma under the Gemma Terms of Use |
+| electric fly-bys | generated: "a Formula E electric race car passes by very fast …" (seeds 982, 986) | Stable Audio 3.0 small-sfx | Stability AI Community License |
+| electric fly-by (real) | [AMBSprt-ZoomH5StudioXY_Formula E 2026 Shanghai_RN_3](https://freesound.org/s/862274/) | Archos | CC0 1.0 |
+| hover air jet (loop) | generated: "powerful compressed air jet thrusters blowing continuously, hovercraft lift fan and air cushion roar …" (seed 1002) | Stable Audio 3.0 small-sfx | Stability AI Community License |
+| hover burst, release | generated: "a single loud burst of compressed air jet firing …" (seeds 1021, 1022), "compressed air jet shutting off …" (seeds 1041, 1043) | Stable Audio 3.0 small-sfx | Stability AI Community License |

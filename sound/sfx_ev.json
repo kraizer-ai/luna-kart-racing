@@ -1,0 +1,58 @@
+{
+ "schema": "luna-sfx-bank-v1",
+ "name": "sfx_ev",
+ "files": {
+  "ogg": "sfx_ev.ogg",
+  "m4a": "sfx_ev.m4a"
+ },
+ "seconds": 26.025,
+ "items": {
+  "jet_loop": {
+   "kind": "loop",
+   "start": 3.05,
+   "end": 9.05
+  },
+  "jet_burst1": {
+   "kind": "shot",
+   "start": 12.105,
+   "end": 13.055,
+   "group": "jet_burst"
+  },
+  "jet_burst2": {
+   "kind": "shot",
+   "start": 13.08,
+   "end": 14.03,
+   "group": "jet_burst"
+  },
+  "jet_release1": {
+   "kind": "shot",
+   "start": 14.055,
+   "end": 15.755,
+   "group": "jet_release"
+  },
+  "jet_release2": {
+   "kind": "shot",
+   "start": 15.78,
+   "end": 17.53,
+   "group": "jet_release"
+  },
+  "ev_flyby1": {
+   "kind": "shot",
+   "start": 17.555,
+   "end": 20.355,
+   "group": "ev_flyby"
+  },
+  "ev_flyby2": {
+   "kind": "shot",
+   "start": 20.38,
+   "end": 23.18,
+   "group": "ev_flyby"
+  },
+  "ev_flyby3": {
+   "kind": "shot",
+   "start": 23.205,
+   "end": 26.005,
+   "group": "ev_flyby"
+  }
+ }
+}
