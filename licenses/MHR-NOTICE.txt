@@ -1,0 +1,32 @@
+Luna Kart Racing - the driver's body
+====================================
+
+The driver's body in this game (karts/body/driver.glb) is derived from
+
+    MHR - Momentum Human Rig, version 1.0.1
+    Copyright (c) Meta Platforms, Inc. and affiliates.
+    https://github.com/facebookresearch/MHR
+
+MHR is licensed under the Apache License, Version 2.0. A copy of the license is in MHR-LICENSE.txt beside this file.
+
+Modifications (Luna Kart Racing, November 2026)
+-----------------------------------------------
+karts/body/driver.glb is not the MHR model: it is a new file made from MHR's output and data by this project's
+bake tools (tools/kart/body in the game's sources). What was changed:
+
+  - The body was given this game's body types with MHR's own shape and skeleton parameters (a default slim build, a
+    woman's shape, five heights, five builds), and the upper arm of the mean skeleton was lengthened.
+  - It was posed seated in this game's kart, the hands closed on the steering wheel's rim, at the key poses the game
+    needs (driving straight, full lock both ways, a hand on the gear lever, on the handbrake, at the visor, the
+    fingers open). The mesh is stored in the straight-ahead driving pose with MHR's pose correctives in the shape.
+  - The differences between plain skinning and MHR's output at the other key poses, and the shape differences of
+    the body types, were stored as morph targets. MHR's corrective network itself is not part of the game.
+  - The skin where it touches the rim was laid on the rim; the surface was smoothed and moved outwards as clothing
+    (a racing suit, gloves); the head above the neck and the feet were removed (the game's own helmet and boots are
+    worn there) and the neck was closed.
+  - Lighter levels of detail were made by removing triangles; joints that move no vertex were removed; attributes
+    were quantised; the joint transforms of the key poses were tabulated for each skeleton.
+  - The suit's and the gloves' design (stored as distance fields in MHR's texture layout) and its normal map are
+    this project's own work.
+
+MHR's code, its corrective network and its other assets are not distributed with this game.
