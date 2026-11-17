@@ -13,7 +13,7 @@
   
   
   <style>html,body{margin:0;background:#07100f}img:not([src]){visibility:hidden}</style>
-  <link rel="stylesheet" href="./assets/main-DB7t5DzX.css" />
+  <link rel="stylesheet" href="./assets/main-Cb37aBYg.css" />
   <meta name="luna-asset-parts" content="asset-parts.json" />
   <meta name="luna-lobby" content="https://luna-drive.byeoksa.workers.dev" />
 </head>
@@ -96,6 +96,11 @@
         <div id="bestEver" class="rh-best hidden"><small class="label">1위</small><i id="bestEverTime">—</i><b id="bestEverName">—</b></div>
       </div>
       <div id="raceNotices" class="rh-notices" aria-live="polite"></div>
+      <!-- The start lights (11-17; user: "출발할때 3 2 1 이 아니고 원래 우리 레이싱 처럼 초록 불 같은거"): the gantry's pod, top middle -
+           three red lamps one a second, then the green row at GO; and the big moments: FINAL LAP, and the finish (the place and
+           FINISH over a chequered sweep; "도착도 한글로 도착이 아니고 순위 빡 뜨고 영어로 피니쉬"). race.js drives both. -->
+      <div id="startLights" class="rh-lights hidden" aria-hidden="true" data-lit="0"><div class="rh-lights-pod"><i></i><i></i><i></i><i></i><i></i><i></i></div><b class="rh-lights-go">GO!</b></div>
+      <div id="raceFx" class="rh-fx hidden" aria-hidden="true"><i class="rh-fx-flash"></i><i class="rh-fx-flag"></i><div class="rh-fx-text"><b class="rh-fx-place"><em></em><sup></sup></b><strong class="rh-fx-word">FINISH</strong><span class="rh-fx-detail"></span></div></div>
       <div class="rh-bl">
         <canvas id="raceMap" class="rh-map" width="240" height="240" aria-label="내 주변 지도"></canvas>
         <div id="raceLaps" class="rh-laps hidden"><b id="lap">1</b><span id="lapOf">1</span><small id="lapUnit">바퀴</small></div>
@@ -173,7 +178,7 @@
     function load(src,type){return new Promise((resolve,reject)=>{const s=document.createElement('script');if(type)s.type=type;s.src=src;s.onload=resolve;s.onerror=()=>reject(Error('실행 파일을 열지 못했습니다. 배포 폴더가 함께 있는지 확인해 주세요.'));document.body.append(s);});}
     try{
       if(location.protocol==='file:'){const css=document.createElement('link');css.rel='stylesheet';css.href='./offline/app.css';document.head.append(css);await load('./offline/assets.js');await load('./offline/app.js');}
-      else await load("./assets/index-Dc3dhs2l.js",'module');
+      else await load("./assets/index-CmzIUMSm.js",'module');
     }catch(error){document.getElementById('loadStatus').textContent=error.message;document.getElementById('startLabel').textContent='실행 자료를 확인해 주세요';window.lunaError={message:error.message};}
   });
 </script>
