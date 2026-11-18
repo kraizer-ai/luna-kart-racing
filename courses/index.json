@@ -5,6 +5,7 @@
   {
    "id": "main",
    "name": "호수 한 바퀴",
+   "thumbnail": "courses/main/thumb.webp",
    "note": "동탄호수공원 둘레길 전체",
    "laps": 1,
    "length": 2083.94,
@@ -32,6 +33,7 @@
   {
    "id": "gallery",
    "name": "루나 갤러리 서킷",
+   "thumbnail": "courses/gallery/thumb.webp",
    "laps": 2,
    "length": 832.05,
    "start": 40,
@@ -48,6 +50,7 @@
   {
    "id": "hill",
    "name": "꼬모 뒤 업힐·다운힐",
+   "thumbnail": "courses/hill/thumb.webp",
    "laps": 2,
    "length": 1395.8,
    "start": 20,
@@ -63,6 +66,7 @@
   {
    "id": "como",
    "name": "꼬모 앞",
+   "thumbnail": "courses/como/thumb.webp",
    "laps": 2,
    "length": 636.85,
    "start": 20,
@@ -77,6 +81,7 @@
   {
    "id": "fountain",
    "name": "음악분수 드리프트 서킷",
+   "thumbnail": "courses/fountain/thumb.webp",
    "laps": 2,
    "length": 1132.25,
    "start": 20,
