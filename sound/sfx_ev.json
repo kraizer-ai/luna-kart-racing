@@ -5,7 +5,7 @@
   "ogg": "sfx_ev.ogg",
   "m4a": "sfx_ev.m4a"
  },
- "seconds": 26.025,
+ "seconds": 26.551,
  "items": {
   "jet_loop": {
    "kind": "loop",
@@ -53,6 +53,12 @@
    "start": 23.205,
    "end": 26.005,
    "group": "ev_flyby"
+  },
+  "ev_surge": {
+   "kind": "shot",
+   "start": 26.03,
+   "end": 26.530854,
+   "group": "ev_surge"
   }
  }
 }

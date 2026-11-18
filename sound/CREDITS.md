@@ -113,3 +113,16 @@ Stable Audio 3.0 generations: local, 8 steps, prompts and seeds in the worker's 
 | electric fly-by (real) | [AMBSprt-ZoomH5StudioXY_Formula E 2026 Shanghai_RN_3](https://freesound.org/s/862274/) | Archos | CC0 1.0 |
 | hover air jet (loop) | generated: "powerful compressed air jet thrusters blowing continuously, hovercraft lift fan and air cushion roar …" (seed 1002) | Stable Audio 3.0 small-sfx | Stability AI Community License |
 | hover burst, release | generated: "a single loud burst of compressed air jet firing …" (seeds 1021, 1022), "compressed air jet shutting off …" (seeds 1041, 1043) | Stable Audio 3.0 small-sfx | Stability AI Community License |
+
+## Music (`public/shows/`, with the fountain's shows)
+| Song | Source | Heard |
+|---|---|---|
+| Sunny Drive | the user's own song, made with Suno (11-14) | free driving, the menus, the grid and the results |
+| High-Speed Drop | the user's own song, made with Suno (11-14) | the race, from the start signal (out of season) |
+| Christmas Sprint | the user's own song, made with Suno (instrumental, 11-18) | the race, from the start signal, while `src/season.js` CHRISTMAS is on |
+
+## Formula Red: the F1 set (`engine_f1.*`) — behind a flag until the skin ships
+| Sound | Source | Author | Licence |
+|---|---|---|---|
+| engine at high revs, fly-bys | [Monza track side.wav](https://freesound.org/s/410894/) (Italian GP 2014: F1 cars approaching, V6 turbo hybrid) | wandererscapes | CC0 1.0 |
+| engine approaching and off the throttle, fly-bys | [Indy Car Passby](https://freesound.org/s/670114/) (2.2 V6 twin-turbo, Indianapolis) | MichaelSearsAudio | **CC BY 4.0** — "Indy Car Passby" by MichaelSearsAudio (https://freesound.org/s/670114/), licensed under CC BY 4.0 |
