@@ -99,7 +99,7 @@
    "id": "night-fever",
    "name": "호수분수 나이트 피버",
    "short": "나이트 피버",
-   "note": "밤에만 열리는 호수 위 빛의 트랙 · 360° 루프 · 대형 트리를 감아 오르는 나선",
+   "note": "밤에만 열리는 호수 위 유리 트랙 · 대형 트리 속 X자 교차 · 점프 · 360° 루프",
    "badge": "출시 예정",
    "picture": {"wide": "courses/upcoming/night-fever/hero.webp", "tall": "courses/upcoming/night-fever/hero_tall.webp", "thumb": "courses/upcoming/night-fever/thumb.webp"}
   },
@@ -107,7 +107,7 @@
    "id": "como-mall",
    "name": "꼬모 아케이드 런",
    "short": "꼬모 아케이드",
-   "note": "꼬모 상가 안에서 출발해 아트리움을 돌고 정문으로 나와 호숫가를 달리는 실내·실외 코스",
+   "note": "꼬모 상가 안에서 출발해 상가 안을 돌고 정문으로 나와 호숫가를 달리는 실내·실외 코스",
    "badge": "출시 예정",
    "picture": {"wide": "courses/upcoming/como-mall/hero.webp", "tall": "courses/upcoming/como-mall/hero_tall.webp", "thumb": "courses/upcoming/como-mall/thumb.webp"}
   }
