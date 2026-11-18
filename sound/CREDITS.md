@@ -89,7 +89,8 @@ Generated clips (Stable Audio Open 1.0, local, seeds and prompts recorded in the
 ## Menus, garage, shop and rooms (`sfx_ui.*`)
 | Sound | Source (author) | Licence |
 |---|---|---|
-| button clicks | [buttons click pastic.wav](https://freesound.org/s/545527/) (rsellick) | CC0 1.0 |
+| button presses (every plain press since 11-18: a mechanical keyboard's blue switch) | [Mechanical Keyboard Typing Cherry Blue Switches](https://freesound.org/s/638035/) (simeonradivoev), [mechanical keyboard click](https://freesound.org/s/764661/) (getwecked) | CC0 1.0 |
+| button clicks (before 11-18, kept in the bank) | [buttons click pastic.wav](https://freesound.org/s/545527/) (rsellick) | CC0 1.0 |
 | swish (close, back) | [Swishes and swooshes](https://freesound.org/s/447808/) (florianreichelt) | CC0 1.0 |
 | toggles | [Flipping Light Switch 5](https://freesound.org/s/840876/) (justamudkip) | CC0 1.0 |
 | paint spray | [paint_shake_and_spray.wav](https://freesound.org/s/707374/) (Mohagged) | CC0 1.0 |
