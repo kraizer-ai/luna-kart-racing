@@ -35,19 +35,19 @@
    ]
   },
   "lite/static.bin.gz": {
-   "bytes": 23093147,
-   "sha256": "ef1133669820635ce8a71495ad20fe8f1d774cc36610cb40ab33ddca6bac6b38",
+   "bytes": 23202807,
+   "sha256": "f6abf7e9c6874af9fbef1c07de07657f29a408105af3339c5713a3e0088da034",
    "type": "application/gzip",
    "parts": [
     {
-     "path": "parts/ef1133669820635ce8a71495-000.bin",
+     "path": "parts/f6abf7e9c6874af9fbef1c07-000.bin",
      "bytes": 16777216,
-     "sha256": "e289601df41a4f799f3554c1a87aafe1649fb03972592b1b2cdbaa40e67c9d3f"
+     "sha256": "75d6472bfc69529621b8b0d6d8e5c75ed7ee4cdf6cf6d4686738f2e1d6e4c23f"
     },
     {
-     "path": "parts/ef1133669820635ce8a71495-001.bin",
-     "bytes": 6315931,
-     "sha256": "3acb9201dc47c622cf3cc6e7638b6be2eab897a065610d3367373755a7829b3c"
+     "path": "parts/f6abf7e9c6874af9fbef1c07-001.bin",
+     "bytes": 6425591,
+     "sha256": "024ac2a706071bed7e665d66b385a0fa59d47abfd72e1b9022dab24f23bce745"
     }
    ]
   }
