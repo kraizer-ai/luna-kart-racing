@@ -1,0 +1,1036 @@
+{
+ "v": 1,
+ "base": "./achievements/",
+ "about": "도전과제 마커 그림. 이름·조건은 도전과제 API에서 받습니다.",
+ "atlas": {
+  "file": "markers-64.webp",
+  "png": "markers-64.png",
+  "size": 640,
+  "cell": 64,
+  "cols": 10,
+  "rows": 10
+ },
+ "crown": {
+  "file": "crown-64.png",
+  "sizes": {
+   "32": "crown-32.png",
+   "64": "crown-64.png",
+   "128": "crown-128.png"
+  }
+ },
+ "plates": {
+  "tiers": [
+   "bronze",
+   "silver",
+   "gold",
+   "platinum",
+   "legend"
+  ],
+  "file": "plate-<tier>.webp",
+  "width": 240,
+  "height": 96,
+  "slice": 48
+ },
+ "items": [
+  {
+   "id": "mk-001",
+   "n": 1,
+   "file": "decal-256/marker-001.webp",
+   "thumb": "decal-256/marker-001.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-002",
+   "n": 2,
+   "file": "decal-256/marker-002.webp",
+   "thumb": "decal-256/marker-002.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-003",
+   "n": 3,
+   "file": "decal-256/marker-003.webp",
+   "thumb": "decal-256/marker-003.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-004",
+   "n": 4,
+   "file": "decal-256/marker-004.webp",
+   "thumb": "decal-256/marker-004.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-005",
+   "n": 5,
+   "file": "decal-256/marker-005.webp",
+   "thumb": "decal-256/marker-005.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-006",
+   "n": 6,
+   "file": "decal-256/marker-006.webp",
+   "thumb": "decal-256/marker-006.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-007",
+   "n": 7,
+   "file": "decal-256/marker-007.webp",
+   "thumb": "decal-256/marker-007.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-008",
+   "n": 8,
+   "file": "decal-256/marker-008.webp",
+   "thumb": "decal-256/marker-008.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-009",
+   "n": 9,
+   "file": "decal-256/marker-009.webp",
+   "thumb": "decal-256/marker-009.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-010",
+   "n": 10,
+   "file": "decal-256/marker-010.webp",
+   "thumb": "decal-256/marker-010.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-011",
+   "n": 11,
+   "file": "decal-256/marker-011.webp",
+   "thumb": "decal-256/marker-011.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-012",
+   "n": 12,
+   "file": "decal-256/marker-012.webp",
+   "thumb": "decal-256/marker-012.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-013",
+   "n": 13,
+   "file": "decal-256/marker-013.webp",
+   "thumb": "decal-256/marker-013.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-014",
+   "n": 14,
+   "file": "decal-256/marker-014.webp",
+   "thumb": "decal-256/marker-014.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-015",
+   "n": 15,
+   "file": "decal-256/marker-015.webp",
+   "thumb": "decal-256/marker-015.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-016",
+   "n": 16,
+   "file": "decal-256/marker-016.webp",
+   "thumb": "decal-256/marker-016.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-017",
+   "n": 17,
+   "file": "decal-256/marker-017.webp",
+   "thumb": "decal-256/marker-017.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-018",
+   "n": 18,
+   "file": "decal-256/marker-018.webp",
+   "thumb": "decal-256/marker-018.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-019",
+   "n": 19,
+   "file": "decal-256/marker-019.webp",
+   "thumb": "decal-256/marker-019.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-020",
+   "n": 20,
+   "file": "decal-256/marker-020.webp",
+   "thumb": "decal-256/marker-020.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-021",
+   "n": 21,
+   "file": "decal-256/marker-021.webp",
+   "thumb": "decal-256/marker-021.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-022",
+   "n": 22,
+   "file": "decal-256/marker-022.webp",
+   "thumb": "decal-256/marker-022.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-023",
+   "n": 23,
+   "file": "decal-256/marker-023.webp",
+   "thumb": "decal-256/marker-023.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-024",
+   "n": 24,
+   "file": "decal-256/marker-024.webp",
+   "thumb": "decal-256/marker-024.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-025",
+   "n": 25,
+   "file": "decal-256/marker-025.webp",
+   "thumb": "decal-256/marker-025.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-026",
+   "n": 26,
+   "file": "decal-256/marker-026.webp",
+   "thumb": "decal-256/marker-026.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-027",
+   "n": 27,
+   "file": "decal-256/marker-027.webp",
+   "thumb": "decal-256/marker-027.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-028",
+   "n": 28,
+   "file": "decal-256/marker-028.webp",
+   "thumb": "decal-256/marker-028.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-029",
+   "n": 29,
+   "file": "decal-256/marker-029.webp",
+   "thumb": "decal-256/marker-029.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-030",
+   "n": 30,
+   "file": "decal-256/marker-030.webp",
+   "thumb": "decal-256/marker-030.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-031",
+   "n": 31,
+   "file": "decal-256/marker-031.webp",
+   "thumb": "decal-256/marker-031.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-032",
+   "n": 32,
+   "file": "decal-256/marker-032.webp",
+   "thumb": "decal-256/marker-032.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-033",
+   "n": 33,
+   "file": "decal-256/marker-033.webp",
+   "thumb": "decal-256/marker-033.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-034",
+   "n": 34,
+   "file": "decal-256/marker-034.webp",
+   "thumb": "decal-256/marker-034.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-035",
+   "n": 35,
+   "file": "decal-256/marker-035.webp",
+   "thumb": "decal-256/marker-035.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-036",
+   "n": 36,
+   "file": "decal-256/marker-036.webp",
+   "thumb": "decal-256/marker-036.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-037",
+   "n": 37,
+   "file": "decal-256/marker-037.webp",
+   "thumb": "decal-256/marker-037.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-038",
+   "n": 38,
+   "file": "decal-256/marker-038.webp",
+   "thumb": "decal-256/marker-038.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-039",
+   "n": 39,
+   "file": "decal-256/marker-039.webp",
+   "thumb": "decal-256/marker-039.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-040",
+   "n": 40,
+   "file": "decal-256/marker-040.webp",
+   "thumb": "decal-256/marker-040.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-041",
+   "n": 41,
+   "file": "decal-256/marker-041.webp",
+   "thumb": "decal-256/marker-041.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-042",
+   "n": 42,
+   "file": "decal-256/marker-042.webp",
+   "thumb": "decal-256/marker-042.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-043",
+   "n": 43,
+   "file": "decal-256/marker-043.webp",
+   "thumb": "decal-256/marker-043.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-044",
+   "n": 44,
+   "file": "decal-256/marker-044.webp",
+   "thumb": "decal-256/marker-044.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-045",
+   "n": 45,
+   "file": "decal-256/marker-045.webp",
+   "thumb": "decal-256/marker-045.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-046",
+   "n": 46,
+   "file": "decal-256/marker-046.webp",
+   "thumb": "decal-256/marker-046.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-047",
+   "n": 47,
+   "file": "decal-256/marker-047.webp",
+   "thumb": "decal-256/marker-047.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-048",
+   "n": 48,
+   "file": "decal-256/marker-048.webp",
+   "thumb": "decal-256/marker-048.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-049",
+   "n": 49,
+   "file": "decal-256/marker-049.webp",
+   "thumb": "decal-256/marker-049.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-050",
+   "n": 50,
+   "file": "decal-256/marker-050.webp",
+   "thumb": "decal-256/marker-050.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-051",
+   "n": 51,
+   "file": "decal-256/marker-051.webp",
+   "thumb": "decal-256/marker-051.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-052",
+   "n": 52,
+   "file": "decal-256/marker-052.webp",
+   "thumb": "decal-256/marker-052.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-053",
+   "n": 53,
+   "file": "decal-256/marker-053.webp",
+   "thumb": "decal-256/marker-053.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-054",
+   "n": 54,
+   "file": "decal-256/marker-054.webp",
+   "thumb": "decal-256/marker-054.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-055",
+   "n": 55,
+   "file": "decal-256/marker-055.webp",
+   "thumb": "decal-256/marker-055.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-056",
+   "n": 56,
+   "file": "decal-256/marker-056.webp",
+   "thumb": "decal-256/marker-056.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-057",
+   "n": 57,
+   "file": "decal-256/marker-057.webp",
+   "thumb": "decal-256/marker-057.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-058",
+   "n": 58,
+   "file": "decal-256/marker-058.webp",
+   "thumb": "decal-256/marker-058.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-059",
+   "n": 59,
+   "file": "decal-256/marker-059.webp",
+   "thumb": "decal-256/marker-059.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-060",
+   "n": 60,
+   "file": "decal-256/marker-060.webp",
+   "thumb": "decal-256/marker-060.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-061",
+   "n": 61,
+   "file": "decal-256/marker-061.webp",
+   "thumb": "decal-256/marker-061.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-062",
+   "n": 62,
+   "file": "decal-256/marker-062.webp",
+   "thumb": "decal-256/marker-062.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-063",
+   "n": 63,
+   "file": "decal-256/marker-063.webp",
+   "thumb": "decal-256/marker-063.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-064",
+   "n": 64,
+   "file": "decal-256/marker-064.webp",
+   "thumb": "decal-256/marker-064.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-065",
+   "n": 65,
+   "file": "decal-256/marker-065.webp",
+   "thumb": "decal-256/marker-065.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-066",
+   "n": 66,
+   "file": "decal-256/marker-066.webp",
+   "thumb": "decal-256/marker-066.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-067",
+   "n": 67,
+   "file": "decal-256/marker-067.webp",
+   "thumb": "decal-256/marker-067.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-068",
+   "n": 68,
+   "file": "decal-256/marker-068.webp",
+   "thumb": "decal-256/marker-068.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-069",
+   "n": 69,
+   "file": "decal-256/marker-069.webp",
+   "thumb": "decal-256/marker-069.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-070",
+   "n": 70,
+   "file": "decal-256/marker-070.webp",
+   "thumb": "decal-256/marker-070.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-071",
+   "n": 71,
+   "file": "decal-256/marker-071.webp",
+   "thumb": "decal-256/marker-071.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-072",
+   "n": 72,
+   "file": "decal-256/marker-072.webp",
+   "thumb": "decal-256/marker-072.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-073",
+   "n": 73,
+   "file": "decal-256/marker-073.webp",
+   "thumb": "decal-256/marker-073.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-074",
+   "n": 74,
+   "file": "decal-256/marker-074.webp",
+   "thumb": "decal-256/marker-074.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-075",
+   "n": 75,
+   "file": "decal-256/marker-075.webp",
+   "thumb": "decal-256/marker-075.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-076",
+   "n": 76,
+   "file": "decal-256/marker-076.webp",
+   "thumb": "decal-256/marker-076.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-077",
+   "n": 77,
+   "file": "decal-256/marker-077.webp",
+   "thumb": "decal-256/marker-077.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-078",
+   "n": 78,
+   "file": "decal-256/marker-078.webp",
+   "thumb": "decal-256/marker-078.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-079",
+   "n": 79,
+   "file": "decal-256/marker-079.webp",
+   "thumb": "decal-256/marker-079.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-080",
+   "n": 80,
+   "file": "decal-256/marker-080.webp",
+   "thumb": "decal-256/marker-080.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-081",
+   "n": 81,
+   "file": "decal-256/marker-081.webp",
+   "thumb": "decal-256/marker-081.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-082",
+   "n": 82,
+   "file": "decal-256/marker-082.webp",
+   "thumb": "decal-256/marker-082.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-083",
+   "n": 83,
+   "file": "decal-256/marker-083.webp",
+   "thumb": "decal-256/marker-083.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-084",
+   "n": 84,
+   "file": "decal-256/marker-084.webp",
+   "thumb": "decal-256/marker-084.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-085",
+   "n": 85,
+   "file": "decal-256/marker-085.webp",
+   "thumb": "decal-256/marker-085.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-086",
+   "n": 86,
+   "file": "decal-256/marker-086.webp",
+   "thumb": "decal-256/marker-086.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-087",
+   "n": 87,
+   "file": "decal-256/marker-087.webp",
+   "thumb": "decal-256/marker-087.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-088",
+   "n": 88,
+   "file": "decal-256/marker-088.webp",
+   "thumb": "decal-256/marker-088.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-089",
+   "n": 89,
+   "file": "decal-256/marker-089.webp",
+   "thumb": "decal-256/marker-089.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-090",
+   "n": 90,
+   "file": "decal-256/marker-090.webp",
+   "thumb": "decal-256/marker-090.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-091",
+   "n": 91,
+   "file": "decal-256/marker-091.webp",
+   "thumb": "decal-256/marker-091.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-092",
+   "n": 92,
+   "file": "decal-256/marker-092.webp",
+   "thumb": "decal-256/marker-092.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-093",
+   "n": 93,
+   "file": "decal-256/marker-093.webp",
+   "thumb": "decal-256/marker-093.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-094",
+   "n": 94,
+   "file": "decal-256/marker-094.webp",
+   "thumb": "decal-256/marker-094.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-095",
+   "n": 95,
+   "file": "decal-256/marker-095.webp",
+   "thumb": "decal-256/marker-095.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-096",
+   "n": 96,
+   "file": "decal-256/marker-096.webp",
+   "thumb": "decal-256/marker-096.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-097",
+   "n": 97,
+   "file": "decal-256/marker-097.webp",
+   "thumb": "decal-256/marker-097.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-098",
+   "n": 98,
+   "file": "decal-256/marker-098.webp",
+   "thumb": "decal-256/marker-098.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-099",
+   "n": 99,
+   "file": "decal-256/marker-099.webp",
+   "thumb": "decal-256/marker-099.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  },
+  {
+   "id": "mk-100",
+   "n": 100,
+   "file": "decal-256/marker-100.webp",
+   "thumb": "decal-256/marker-100.webp",
+   "aspect": 1,
+   "category": "도전 마커",
+   "locked": true,
+   "tintable": false
+  }
+ ]
+}
