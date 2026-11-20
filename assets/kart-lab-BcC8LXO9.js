@@ -1,2 +1,0 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./lab-CLA3qYBa.js","./kart-B8E6JLus.js","./lab-CuLgq3ZE.js","./showroom-B0ZmS5BX.js","./preload-helper-DIbePYYx.js"])))=>i.map(i=>d[i]);
-import{t as e}from"./preload-helper-DIbePYYx.js";new URLSearchParams(location.search).has(`old`)?(document.body.classList.add(`old`),document.getElementById(`note`).textContent=`카트 실험실 · 끌기: 둘러보기 · 휠: 거리 · ← →: 조향 · C: 운전석`,e(()=>import(`./lab-CLA3qYBa.js`),__vite__mapDeps([0,1]),import.meta.url)):e(()=>import(`./lab-CuLgq3ZE.js`),__vite__mapDeps([2,1,3,4]),import.meta.url);
