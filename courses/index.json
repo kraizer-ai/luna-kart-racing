@@ -92,17 +92,23 @@
    "clearance": "courses/fountain/clearance.json",
    "edges": "courses/fountain/edges.json",
    "kerbs": "led"
-  }
- ],
- "upcoming": [
+  },
   {
    "id": "night-fever",
    "name": "호수분수 나이트 피버",
-   "short": "나이트 피버",
-   "note": "밤에만 열리는 호수 위 유리 트랙 · 대형 트리 속 X자 교차 · 점프 · 360° 루프",
-   "badge": "출시 예정",
-   "picture": {"wide": "courses/upcoming/night-fever/hero.webp", "tall": "courses/upcoming/night-fever/hero_tall.webp", "thumb": "courses/upcoming/night-fever/thumb.webp"}
-  },
+   "thumbnail": "courses/night-fever/thumb.webp",
+   "laps": 3,
+   "length": 882.82,
+   "start": 42,
+   "home": 30,
+   "note": "밤에만 열리는 호수 위 유리 트랙 · 대형 트리 속 X자 교차 · 점프 · 360° 루프 · CPU 없음(타임어택·함께 달리기)",
+   "route": "courses/night-fever/course.json",
+   "surface": "courses/night-fever/surface.json",
+   "clearance": "courses/night-fever/clearance.json",
+   "night": true
+  }
+ ],
+ "upcoming": [
   {
    "id": "como-mall",
    "name": "꼬모 아케이드 런",
