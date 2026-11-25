@@ -1,0 +1,29 @@
+레이크꼬모 주차 차량
+
+Hyundai Ioniq 5 - Lowpoly — andikapratamaw
+https://sketchfab.com/3d-models/hyundai-ioniq-5-lowpoly-675e78311e8440d88714bd212cb7a8fb
+Creative Commons Attribution 4.0 https://creativecommons.org/licenses/by/4.0/
+
+Hyundai Elantra 2022 [ Ultra Low Poly ] — AhmedE
+https://sketchfab.com/3d-models/hyundai-elantra-2022-ultra-low-poly-b30d0baf6c3d4ca4adf2f484a90fc861
+Creative Commons Attribution 4.0 https://creativecommons.org/licenses/by/4.0/
+
+Daewoo Lanos (low-poly) — Randonavt
+https://sketchfab.com/3d-models/daewoo-lanos-low-poly-d3d646fd9d434743840c4550dd636025
+Creative Commons Attribution 4.0 https://creativecommons.org/licenses/by/4.0/
+
+2027 Mercedes- Benz C-Class Facelift (Low Poly) — BMW'S Lost Proxy
+https://sketchfab.com/3d-models/2027-mercedes-benz-c-class-facelift-low-poly-82af227d66694ed48f0fcc0705703965
+Creative Commons Attribution 4.0 https://creativecommons.org/licenses/by/4.0/
+
+Audi A4 (B9) - Single Mesh Static Prop — Dester
+https://sketchfab.com/3d-models/audi-a4-b9-single-mesh-static-prop-d9b608298ef64cc5813286bc63629c8e
+Creative Commons Attribution 4.0 https://creativecommons.org/licenses/by/4.0/
+
+Hatchback v3 / Prius Hybrid v3 — Open Robotics, CC0 1.0
+https://app.gazebosim.org/OpenRobotics/fuel/models/Hatchback
+https://app.gazebosim.org/OpenRobotics/fuel/models/Prius%20Hybrid
+https://creativecommons.org/publicdomain/zero/1.0/
+
+게임용으로 단위를 미터로 변환하고 텍스처를 압축했습니다. 차량 배치는 원래 주차선 좌표를 사용합니다.
+City Bus by Polyfork (https://polyfork.dev/asset/city-bus-49fd97), CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Used at road scale with a lane animation.

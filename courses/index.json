@@ -79,6 +79,20 @@
    "kerbs": "circuit"
   },
   {
+   "id": "como-mall",
+   "name": "레이크꼬모 상가 한 바퀴",
+   "thumbnail": "courses/como-mall/thumb.webp",
+   "note": "B3 나선 램프에서 송동길·정문·모던하우스·한즈베이크와 테라로사를 돌아오는 아스팔트 코스",
+   "laps": 1,
+   "length": 1033.78,
+   "start": 5.8,
+   "home": 3.0,
+   "route": "courses/como-mall/route.json",
+   "surface": "courses/como-mall/surface.json",
+   "clearance": "courses/como-mall/clearance.json",
+   "edges": "courses/como-mall/edges.json"
+  },
+  {
    "id": "fountain",
    "name": "음악분수 드리프트 서킷",
    "thumbnail": "courses/fountain/thumb.webp",
