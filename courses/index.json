@@ -4,7 +4,9 @@
  "courses": [
   {
    "id": "main",
+   "difficulty": 40,
    "name": "호수 한 바퀴",
+   "badge": "보통",
    "thumbnail": "courses/main/thumb.webp",
    "note": "동탄호수공원 둘레길 전체",
    "laps": 1,
@@ -32,6 +34,7 @@
   },
   {
    "id": "gallery",
+   "difficulty": 10,
    "name": "루나 갤러리 서킷",
    "thumbnail": "courses/gallery/thumb.webp",
    "laps": 2,
@@ -49,6 +52,7 @@
   },
   {
    "id": "hill",
+   "difficulty": 60,
    "name": "꼬모 뒤 업힐·다운힐",
    "thumbnail": "courses/hill/thumb.webp",
    "laps": 2,
@@ -65,7 +69,9 @@
   },
   {
    "id": "como",
+   "difficulty": 30,
    "name": "꼬모 앞",
+   "badge": "초급",
    "thumbnail": "courses/como/thumb.webp",
    "laps": 2,
    "length": 636.85,
@@ -80,7 +86,9 @@
   },
   {
    "id": "como-mall",
+   "difficulty": 80,
    "name": "레이크꼬모 상가 한 바퀴",
+   "badge": "최고난이도",
    "thumbnail": "courses/como-mall/thumb.webp",
    "note": "B3 나선 램프에서 송동길·정문·모던하우스·한즈베이크와 테라로사를 돌아오는 아스팔트 코스",
    "laps": 1,
@@ -94,7 +102,9 @@
   },
   {
    "id": "fountain",
+   "difficulty": 50,
    "name": "음악분수 드리프트 서킷",
+   "badge": "중급",
    "thumbnail": "courses/fountain/thumb.webp",
    "laps": 2,
    "length": 1132.25,
@@ -109,7 +119,9 @@
   },
   {
    "id": "night-fever",
+   "difficulty": 70,
    "name": "호수분수 나이트 피버",
+   "badge": "고난이도",
    "thumbnail": "courses/night-fever/thumb.webp",
    "laps": 3,
    "length": 882.82,
