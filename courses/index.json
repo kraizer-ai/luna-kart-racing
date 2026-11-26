@@ -51,6 +51,24 @@
    "badgeTone": "easy"
   },
   {
+   "id": "como-perimeter",
+   "difficulty": 20,
+   "name": "꼬모 바깥 한 바퀴",
+   "badge": "초급",
+   "badgeTone": "easy",
+   "thumbnail": "courses/como-perimeter/thumb.webp",
+   "note": "꼬모 정문 → 산길 정상 → 버드나무 앞 광장 → 써브웨이 옆 통로",
+   "laps": 2,
+   "length": 1012.471,
+   "start": 8,
+   "home": 2,
+   "route": "courses/como-perimeter/route.json",
+   "surface": "courses/como-perimeter/surface.json",
+   "clearance": "courses/como-perimeter/clearance.json",
+   "edges": "courses/como-perimeter/edges.json",
+   "kerbs": "circuit"
+  },
+  {
    "id": "hill",
    "difficulty": 60,
    "name": "꼬모 뒤 업힐·다운힐",
