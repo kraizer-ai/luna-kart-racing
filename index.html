@@ -14,7 +14,7 @@
   
   
   <style>html,body{margin:0;background:#07100f}img:not([src]){visibility:hidden}</style>
-  <link rel="stylesheet" href="./assets/main-CThlziVM.css" />
+  <link rel="stylesheet" href="./assets/main-00JP8RBj.css" />
   <meta name="luna-asset-parts" content="asset-parts.json" />
   <meta name="luna-asset-hashes" content="asset-hashes-371de3ef54520e79.json" />
   <meta name="luna-lobby" content="https://luna-drive.byeoksa.workers.dev" />
@@ -51,6 +51,7 @@
           <a id="comoRace" hidden class="mode" style="display:none;grid-column:1/-1;align-items:center;padding:8px 12px;text-decoration:none" href="./como-drone.html?mode=race"><b>꼬모 쇼핑몰 탐험 주행</b><small>ABC마트 · 송동길 · B2 종로서적 · 테라로사 한 바퀴</small></a>
           <a id="comoDrone" hidden class="mode" style="display:none;grid-column:1/-1;align-items:center;padding:8px 12px;text-decoration:none" href="./como-drone.html"><b>꼬모 드론 탐색</b><small>공원 · B3 · 하우스디 방향 둘러보기</small></a>
         </div>
+        <button id="developerNoteButton" type="button" class="text-button" hidden>개발자에게 쪽지</button>
         <section id="roomJoin" class="room-join hidden" aria-label="방 참여하기">
           <header><b>방 참여하기</b><button id="roomJoinClose" type="button" class="room-close" aria-label="방 참여하기 닫기">×</button></header>
           <form id="roomCodeForm" class="room-code" autocomplete="off"><input id="roomCodeInput" maxlength="7" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="방 코드 4자리 (예: K7QM)" aria-label="방 코드" /><button type="submit">코드로 참여</button></form>
@@ -69,6 +70,15 @@
         </form>
       </div>
     </section>
+    <dialog id="developerNoteDialog" aria-labelledby="developerNoteTitle">
+      <form id="developerNoteForm">
+        <div class="dialog-head"><h2 id="developerNoteTitle">개발자에게 쪽지</h2><button type="button" class="icon-button" aria-label="닫기">×</button></div>
+        <label for="developerNoteText">어떤 점을 개선하면 좋을까요?</label>
+        <textarea id="developerNoteText" rows="4" required></textarea>
+        <div class="note-footer"><output id="developerNoteCount">0 / 200</output><button type="submit" class="primary" disabled>보내기</button></div>
+        <p role="status" id="developerNoteStatus"></p>
+      </form>
+    </dialog>
     <section id="welcome" class="welcome hidden">
       <span class="eyebrow">호수를 따라, 나만의 속도로</span>
       <h1>잠깐의<br>다른 일상.</h1>
@@ -182,7 +192,7 @@
     function load(src,type){return new Promise((resolve,reject)=>{const s=document.createElement('script');if(type)s.type=type;s.src=src;s.onload=resolve;s.onerror=()=>reject(Error('실행 파일을 열지 못했습니다. 배포 폴더가 함께 있는지 확인해 주세요.'));document.body.append(s);});}
     try{
       if(location.protocol==='file:'){const css=document.createElement('link');css.rel='stylesheet';css.href='./offline/app.css';document.head.append(css);await load('./offline/assets.js');await load('./offline/app.js');}
-      else await load("./assets/index-p3r1n5Hq.js",'module');
+      else await load("./assets/index-D1ECsEjt.js",'module');
     }catch(error){document.getElementById('loadStatus').textContent=error.message;document.getElementById('startLabel').textContent='실행 자료를 확인해 주세요';window.lunaError={message:error.message};}
   });
 </script>
