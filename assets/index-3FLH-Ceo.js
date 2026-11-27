@@ -1,2 +1,0 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./main-Dks21Esw.js","./lite-materials-Buhpho6M.js","./preload-helper-DIbePYYx.js","./kart-look-B3PUO5ig.js","./kart-config-BOTcEMTc.js","./showroom-CwE3cuxO.js","./kart-Cne8l7QJ.js","./main-DfXH5Q59.css"])))=>i.map(i=>d[i]);
-import{t as e}from"./preload-helper-DIbePYYx.js";location.protocol!==`file:`&&e(()=>import(`./main-Dks21Esw.js`).then(e=>e.t),__vite__mapDeps([0,1,2,3,4,5,6,7]),import.meta.url);
