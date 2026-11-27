@@ -14,7 +14,7 @@
   
   
   <style>html,body{margin:0;background:#07100f}img:not([src]){visibility:hidden}</style>
-  <link rel="stylesheet" href="./assets/main-00JP8RBj.css" />
+  <link rel="stylesheet" href="./assets/main-DfXH5Q59.css" />
   <meta name="luna-asset-parts" content="asset-parts.json" />
   <meta name="luna-asset-hashes" content="asset-hashes-371de3ef54520e79.json" />
   <meta name="luna-lobby" content="https://luna-drive.byeoksa.workers.dev" />
@@ -131,6 +131,19 @@
         <p><kbd>R</kbd><span>복귀</span></p>
         <p><kbd>ESC</kbd><span>일시정지 · 홈</span></p>
       </aside>
+      <button id="droneRooms" type="button">방 목록</button>
+      <button id="droneView" type="button" aria-label="추적 시점으로 전환">기체 카메라 <kbd>C</kbd></button>
+      <section id="droneOsd" aria-label="드론 비행 계기">
+        <svg class="drone-route" viewBox="-54 -54 108 108" aria-label="코스와 드론 위치">
+          <path id="droneRoute"/><path id="droneCursor" d="M0 -4.8 3.4 3.2 0 1.8 -3.4 3.2Z"/>
+        </svg>
+        <div class="drone-heading" aria-label="기수 방위"><i></i><b id="droneHeading"></b></div>
+        <div class="drone-speed"><small>SPD</small> <b id="droneSpeed"></b> km/h</div>
+        <div class="drone-height"><small>AGL</small><b id="droneHeight"></b> m</div>
+        <div id="droneBrackets" hidden aria-hidden="true"></div>
+        <button type="button" id="droneRelease" hidden title="추적 해제"></button>
+      </section>
+      <p class="drone-controls"><span>카트 클릭으로 추적 · 드래그로 시선 · WASD 자유 비행</span><span>카트를 눌러 추적 · 드래그로 시선 · 페달과 패드로 자유 비행</span></p>
       <div class="rh-br">
         <svg class="rh-rev" viewBox="0 0 300 150" aria-hidden="true" focusable="false"><path class="rh-rev-under" d="M22 140A100 100 0 0 1 122 40H290"/><path class="rh-rev-track" d="M22 140A100 100 0 0 1 122 40H290"/><path class="rh-rev-red" d="M249.4 40H290"/><path id="revFill" class="rh-rev-fill" pathLength="100" d="M22 140A100 100 0 0 1 122 40H290"/><g class="rh-rev-ticks"><line x1="22" y1="140" x2="28" y2="140"/><line x1="53.3" y1="67.3" x2="57.4" y2="71.7"/><line x1="127.5" y1="40" x2="127.5" y2="46"/><line x1="208.7" y1="40" x2="208.7" y2="46"/><line x1="290" y1="40" x2="290" y2="46"/><text x="11" y="140">0</text><text x="46.4" y="60">4</text><text x="127.5" y="29">8</text><text x="208.7" y="29">12</text><text x="290" y="29">16</text></g></svg>
         <div id="booster" class="rh-boost" aria-label="부스터"><i><b></b><s></s></i><i><b></b><s></s></i><i><b></b><s></s></i></div>
@@ -186,13 +199,13 @@
     <section id="stats" class="stats hidden" aria-label="성능 측정"><header>실제 렌더링 <button id="closeStats" aria-label="성능 패널 닫기">×</button></header><pre id="statsText"></pre></section>
     <div id="toast" class="toast" role="status"></div>
     <footer class="credits">© OpenStreetMap contributors · 공원 형상: Dongtan Luna</footer>
-  </main>
+  </main>
 <script>
   addEventListener('DOMContentLoaded', async () => {
     function load(src,type){return new Promise((resolve,reject)=>{const s=document.createElement('script');if(type)s.type=type;s.src=src;s.onload=resolve;s.onerror=()=>reject(Error('실행 파일을 열지 못했습니다. 배포 폴더가 함께 있는지 확인해 주세요.'));document.body.append(s);});}
     try{
       if(location.protocol==='file:'){const css=document.createElement('link');css.rel='stylesheet';css.href='./offline/app.css';document.head.append(css);await load('./offline/assets.js');await load('./offline/app.js');}
-      else await load("./assets/index-C9WHEzIq.js",'module');
+      else await load("./assets/index-3FLH-Ceo.js",'module');
     }catch(error){document.getElementById('loadStatus').textContent=error.message;document.getElementById('startLabel').textContent='실행 자료를 확인해 주세요';window.lunaError={message:error.message};}
   });
 </script>

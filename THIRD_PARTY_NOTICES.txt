@@ -55,3 +55,7 @@ https://creativecommons.org/publicdomain/zero/1.0/
 City Bus by Polyfork, licensed CC BY 4.0. Animated on the Dongtan-daero route.
 https://polyfork.dev/asset/city-bus-49fd97
 https://creativecommons.org/licenses/by/4.0/
+
+Spectator aircraft: FPV quadcopter 5 in freestyle, assembled (Innerscene, CC0-1.0).
+Reduced mesh, articulated propellers and camera.
+https://www.innerscene.com/tools/library/3d-parts/fpv-quadcopter-5-in-freestyle-assembled-8b538f52
