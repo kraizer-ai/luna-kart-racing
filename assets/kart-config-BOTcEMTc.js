@@ -1,1 +1,0 @@
-import{X as e}from"./lite-materials-Buhpho6M.js";var t=.43,n=1.15,r=e.width/2*t,i=e.length/2*t,a=(e.rearAxleZ-e.frontAxleZ)*t;export{a,t as i,i as n,r,n as t};
